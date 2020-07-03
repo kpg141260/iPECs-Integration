@@ -1,6 +1,10 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import os, ssl
+import ipecsAPI
+
+# Create object from class so we get wrapper functions available
+api = ipecsAPI.ipecsAPI ()
 
 if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None)):
     ssl._create_default_https_context = ssl._create_unverified_context
@@ -18,7 +22,7 @@ headers = {
     'Sec-Fetch-Site': 'same-origin',
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Dest': 'empty',
-    'Referer': 'https://srsupply.fortiddns.com:8743/apidemo.html',
+    'Referrer': 'https://srsupply.fortiddns.com:8743/apidemo.html',
     'Accept-Encoding': 'gzip, deflate, br',
     'Accept-Language': 'en-GB,en;q=0.9,en-US;q=0.8'
     }
