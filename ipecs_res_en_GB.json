@@ -5,8 +5,8 @@
         "err002": ""
     },
     "dbg": {
-        "dbg001": "",
-        "dbg002": ""
+        "dbg001": "Base URI ->> {}.",
+        "dbg002": "Full URI ->> {}."
     },
     "warn": {
         "wrn001": "",
@@ -18,6 +18,6 @@
     },
     "msg": {
         "msg001": "Language resource file {} successfully loaded.",
-        "msg002": ""
+        "msg002": "iPECsAPI execution terminated normally."
     }
 }

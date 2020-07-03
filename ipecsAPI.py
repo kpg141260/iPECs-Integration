@@ -38,19 +38,6 @@ class ipecsAPI:
         except Exception as ex:
             raise (ex)
 
-# Self-Destruct
-    def __del__ (self):
-        if isinstance(self.__cnf):
-            del self.__cnf
-        if isinstance (self.__baseURI):
-            del self.__baseURI
-        if isinstance (self.__fullURI):
-            del self.__fullURI
-        self.__log.info (self.__res['msg']['msg002'])
-        if isinstance (self.__res):
-            del self.__res
-        if isinstance (self.__log):
-            del self.__log
 
 # Configure Logger
     def config_logger (self, id):
@@ -142,5 +129,25 @@ class ipecsAPI:
         except Exception as ex:
             raise (ex)
 
+# Get Base URI from Config File
+    def getBaseURI (self):
+        if not self.__isInitialised:
+            raise RuntimeError ("iPECsAPI ->> class ipecsAPI has not been initialised properly!")
+        
+        self.__baseURI = "{}:{}/{}/".format(self.__cnf['URI']['BaseURI'],self.__cnf['URI']['Port'],self.__cnf['URI']['type'])
+        self.__log.debug ((self.__res['dbg']['dbg001']).format (self.__baseURI))
+        return (self.__baseURI)
 
+# Get Full URI from Config File
+    def getFullURI (self):
+        if not self.__isInitialised:
+            raise RuntimeError ("iPECsAPI ->> class ipecsAPI has not been initialised properly!")
+        
+        self.__fullURI = "{}{}/users/{}/".format(self.getBaseURI(), self.__cnf['URI']['APIVersion'],self.__cnf['URI']['UID'])
+        self.__log.debug ((self.__res['dbg']['dbg002']).format (self.__fullURI))
+        return (self.__fullURI)
+
+# Provide logging pointer
+    def getlogger (self):
+        return self.__log
     
