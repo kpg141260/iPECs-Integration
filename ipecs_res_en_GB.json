@@ -1,0 +1,23 @@
+{
+    "Language Resource File": "en-GB",
+    "err": {
+        "err001": "",
+        "err002": ""
+    },
+    "dbg": {
+        "dbg001": "",
+        "dbg002": ""
+    },
+    "warn": {
+        "wrn001": "",
+        "wrn002": ""
+    },
+    "inf": {
+        "inf001": "",
+        "inf002": ""
+    },
+    "msg": {
+        "msg001": "Language resource file {} successfully loaded.",
+        "msg002": ""
+    }
+}

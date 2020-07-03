@@ -1,0 +1,7 @@
+'2020-07-03:18:08:12,519  INFO     [iPECsAPI.config_logger:96] iPECsAPI Wrapper version 0.0.1 loaded.
+'2020-07-03:18:08:13,249  DEBUG    [iPECsAPI.config_logger:97] Log system activated.
+'2020-07-03:18:23:03,970  INFO     [iPECsAPI.config_logger:96] iPECsAPI Wrapper version 0.0.1 loaded.
+'2020-07-03:18:23:04,481  DEBUG    [iPECsAPI.config_logger:97] Log system activated.
+'2020-07-03:18:35:57,340  INFO     [iPECsAPI.config_logger:97] iPECsAPI Wrapper version 0.0.1 loaded.
+'2020-07-03:18:35:57,340  DEBUG    [iPECsAPI.config_logger:98] Log system activated.
+'2020-07-03:18:36:02,268  INFO     [iPECsAPI.loadResourceFile:121] Language resource file /Users/Peter/OneDrive/Development/iPecs/ipecs_res_en_GB.json successfully loaded.

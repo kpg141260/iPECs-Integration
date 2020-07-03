@@ -4,5 +4,17 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.words": [
+			"Initialised",
+			"KHTML",
+			"PYTHONHTTPSVERIFY",
+			"SMDR",
+			"chdir",
+			"cmdurl",
+			"firl",
+			"ipecs",
+			"ipxapi"
+		]
+	}
 }
