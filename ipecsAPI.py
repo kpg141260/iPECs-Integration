@@ -1,16 +1,22 @@
-import json
-import os
-import sys
-import logging
-from logging.handlers import RotatingFileHandler
-from __version import __version__
-from __version import __product__
+import  json
+import  os, ssl
+import  sys
+import  socket
+import  requests
+import  urllib3
+from    requests.auth import HTTPBasicAuth
+import  logging
+from    logging.handlers import RotatingFileHandler
+from    __version import __version__
+from    __version import __product__
 
 class ipecsAPI:
+    __notInitErr = "iPECsAPI ->> class ipecsAPI has not been initialised properly!"
     __cnf = {}
     __res = {}
     __baseURI = ""
     __fullURI = ""
+    __wssURI  = ""
     __log = logging.Logger
     __isInitialised = False
 
@@ -34,10 +40,16 @@ class ipecsAPI:
             # Try to configure logging function
             self.__log = self.config_logger (log_id)
             self.loadResourceFile ()
+            # Make sure to avoid SSl errors
+            if self.__cnf['URI']['disableSSLWarnings']:
+                if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None)):
+                    self.__log.info (self.__res['inf']['inf003'])
+                    ssl._create_default_https_context = ssl._create_unverified_context
+                    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+            # Initialisation complete - we can use his class now
             self.__isInitialised = True
         except Exception as ex:
             raise (ex)
-
 
 # Configure Logger
     def config_logger (self, id):
@@ -132,7 +144,7 @@ class ipecsAPI:
 # Get Base URI from Config File
     def getBaseURI (self):
         if not self.__isInitialised:
-            raise RuntimeError ("iPECsAPI ->> class ipecsAPI has not been initialised properly!")
+            raise RuntimeError (self.__notInitErr)
         
         self.__baseURI = "{}:{}/{}/".format(self.__cnf['URI']['BaseURI'],self.__cnf['URI']['Port'],self.__cnf['URI']['type'])
         self.__log.debug ((self.__res['dbg']['dbg001']).format (self.__baseURI))
@@ -141,7 +153,7 @@ class ipecsAPI:
 # Get Full URI from Config File
     def getFullURI (self):
         if not self.__isInitialised:
-            raise RuntimeError ("iPECsAPI ->> class ipecsAPI has not been initialised properly!")
+            raise RuntimeError (self.__notInitErr)
         
         self.__fullURI = "{}{}/users/{}/".format(self.getBaseURI(), self.__cnf['URI']['APIVersion'],self.__cnf['URI']['UID'])
         self.__log.debug ((self.__res['dbg']['dbg002']).format (self.__fullURI))
@@ -149,5 +161,53 @@ class ipecsAPI:
 
 # Provide logging pointer
     def getlogger (self):
+        if not self.__isInitialised:
+            raise RuntimeError (self.__notInitErr)
         return self.__log
-    
+
+# Provide pointer to language resource file
+    def getResources (self):
+        if not self.__isInitialised:
+            raise RuntimeError (self.__notInitErr)
+        return self.__res
+
+# Get IP address of ipecs server
+    def getiPECsServerIP (self):
+        if not self.__isInitialised:
+            raise RuntimeError (self.__notInitErr)
+        try:
+            if self.__cnf['URI']['BaseURI'].startswith('https://'):
+                host = self.__cnf['URI']['BaseURI'].replace('https://', '')
+            else:
+                host = self.__cnf['URI']['BaseURI']
+            ip = socket.gethostbyname (host)
+            self.__log.info (self.__res['inf']['inf001'].format (host, ip))
+            return ip
+        except socket.error as ex:
+            self.__log.error (self.__res['err']['err001'].format (host, ex))
+        finally:
+            del host
+
+# Send login command to iPECs Server API
+    def ipecsLogin (self):
+        if not self.__isInitialised:
+            raise RuntimeError (self.__notInitErr)
+        try:
+            cmd = self.__fullURI + 'login/'
+            self.__log.debug (self.__res['inf']['inf002'].format(cmd))
+            self.__log.debug ("Request Header: {}".format(self.__cnf['header']))
+            try:
+                response = requests.get(cmd, auth=HTTPBasicAuth(self.__cnf['URI']['UID'], self.__cnf['URI']['PW']), headers=self.__cnf['header'], verify=self.__cnf['URI']['verify'])
+                json = response.json()
+                self.__log.info (json)
+            except urllib3.exceptions.InsecureRequestWarning as ex:
+                self.__log.error (ex)
+            except requests.exceptions.HTTPError:
+                json = response.json()
+                self.__log.error ("Error {json['error']}")
+            except requests.exceptions.SSLError as ex:
+                self.__log.error (ex)
+        except KeyError as ex:
+            self.__log.error (ex)
+        except Exception as ex:
+            self.__log.fatal (ex)

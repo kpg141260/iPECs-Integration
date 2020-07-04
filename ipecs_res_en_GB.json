@@ -1,7 +1,7 @@
 {
     "Language Resource File": "en-GB",
     "err": {
-        "err001": "",
+        "err001": "Connection error while trying to connect to {} ->> socket.error: {}",
         "err002": ""
     },
     "dbg": {
@@ -13,8 +13,9 @@
         "wrn002": ""
     },
     "inf": {
-        "inf001": "",
-        "inf002": ""
+        "inf001": "Found IP address of {} to be {}.",
+        "inf002": "Attempting to communicate with iPECs API using command: {}.",
+        "inf003": "Disabling SSL certificate warnings."
     },
     "msg": {
         "msg001": "Language resource file {} successfully loaded.",
