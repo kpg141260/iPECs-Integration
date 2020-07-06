@@ -1,0 +1,60 @@
+{
+    "commands": {
+        "login":        "{0}{1}/login",
+        "logout":       "{0}{1}/logout",
+        "smdr":         "{0}{1}/smdr",
+        "acd":          "{0}{1}/acd",
+        "monitor":      "{0}{1}/call/monitor",
+        "presence":     "{0}{1}/call/presence",
+        "mwi":          "{0}{1}/call/mwi",
+        "flexpage":     "{0}{1}/call/flexpage",
+        "agent_logon":  "{0}{1}/call/agent_logon",
+        "agent_logoff": "{0}{1}/call/agent_logoff",
+        "agent_state":  "{0}{1}/call/agent_state"
+    },
+    "op-codes": {
+        "smdr-get-record-count":    {"countOnly": "true"},
+        "smdr-get-record-all":      {"countOnly": "false", "maxCount": 0},
+        "smdr-get-record-num":      {"maxCount": 0}
+    },
+    "headers": {
+        "hdr_login": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language": "en-GB,en;q=0.9,en-US;q=0.8",
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "Content-type": "application/json",
+            "DNT": "1",
+            "Pragma": "no-cache",
+            "Referrer": "https://srsupply.fortiddns.com:8743/apidemo.html",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-Mode": "cors",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36 Edg/83.0.478.45"
+        },
+        "hdr_logout": {
+            "Authorization": "Bearer {token}"
+        }
+    },
+    "responses": {
+        "error": {
+            "code:": 0,
+            "message": ""
+        },
+        "rsp_login": {
+                "token": "", 
+                "checkConnectionTimer": 0,
+                "systemType": "",
+                "systemVersion": "", 
+                "apiVersion": ""
+        }
+    },
+    "error-codes": {
+        "1": "Parameter error",
+        "2": "Version error",
+        "3": "License error",
+        "4": "Login information mismatch",
+        "101": "Authentication failure"
+    }
+}
+
