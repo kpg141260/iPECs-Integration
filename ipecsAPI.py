@@ -1,3 +1,13 @@
+# Copyright Notice
+# [2020] - [Current] Peter Gossler 
+# All Rights Reserved.
+# NOTICE:  All information contained herein is, and remains the property of Peter Gossler
+# and his suppliers, if any.  The intellectual and technical concepts contained herein 
+# are proprietary to Peter Gossler and his suppliers and may be covered by Singaporean 
+# and Foreign Patents, patents in process, and are protected by trade secret or copyright law. 
+# Dissemination of this information or reproduction of this material is strictly forbidden 
+# unless prior written permission is obtained from Peter Gossler, kpg141260@live.de.
+
 import  json
 import  os, ssl
 import  sys
@@ -321,11 +331,35 @@ class ipecsAPI:
 
     The function returns an object of type {json} containing the language strings.
     """
-    def getResources (self):
+    def getResources (self, section=None) -> dict:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
-        return self.__res
+        if section is None:
+            return self.__res
+        for key in self.__res.items():
+            if key[0] == section:
+                return self.__res[section]
+        raise KeyError (self.__res['err']['err002'].format(section))
 
+# Provide pointer to configuration file
+    """
+    Function getConfiguration.
+    
+    Parameters
+    ----------
+    none : nil.
+
+    The function returns an object of type {json} containing the configuration settings.
+    """
+    def getConfiguration (self, section=None) -> dict:
+        if not self.__isInitialised:
+            raise RuntimeError (self.__notInitErr)
+        if section is None:
+            return self.__cnf
+        for key in self.__cnf.items():
+            if key[0] == section:
+                return self.__cnf[section]
+        raise KeyError (self.__cnf['err']['err002'].format(section))
 
 # Provide pointer to ipecs commands
     """
@@ -513,6 +547,8 @@ class ipecsAPI:
         # The class is not properly initialised, cannot function - raise exception
         if not self.__isInitialised:
             raise RuntimeError (self.__cnf['ipecs']['err002'].format(command, self.__cnf['resource']['commands-file'], "commands"))
+        if not self.__isLoggedIn and command != 'login':
+            raise UserWarning (self.__cnf['http']['http003'])
         
         found = False
         # Check if the desired command is listed in the supported commands list

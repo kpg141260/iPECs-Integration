@@ -37,12 +37,18 @@
         "200": "[i] HTTP request [{0}] successful.",
         "100": "?] Unexpected Error: [HTTP {0}]: Content: [{1}].",
         "http001": "User [{0}] is already logged in -> login command not executed.",
-        "http002": "User [{0}] not logged in -> logout command not executed."
+        "http002": "User [{0}] not logged in -> logout command not executed.",
+        "http003": "No user logged onto iPECs API server - command cannot be executed!"
     },
     "ipecs": {
         "error": "[!] iPECs API return the following error: ID: [{0}], Message: [{}].",
         "err002": "Command [{0}] not found in list of supported commands! Please check file [{1}] section [{2}] for list of supported commands.",
         "err003": "iPEcs command [{0}] not found",
         "wrn001": "iPECs command [{0}] not yet supported!"
+    },
+    "wss": {
+        "wss001": "Secure WEB Socket [{0}] established.",
+        "wss002": "Secure WEB Socket [{0}] released.",
+        "wss003": "Secure WEB Socket received the following message from server: [{0}]."
     }
 }
