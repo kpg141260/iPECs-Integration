@@ -19,6 +19,7 @@ import ipecs_socket
 try:
     ipecs = ipecsAPI.ipecsAPI ()
     opcodes = ipecs.getOpCodes ()
+    config  = ipecs.getConfiguration (section='URI')
     uid = 'apiadmin'
     pwd = 'APIproject2020'
 

@@ -6,15 +6,28 @@
 	],
 	"settings": {
 		"cSpell.words": [
+			"Dsmdr",
+			"Initialisation",
 			"Initialised",
 			"KHTML",
 			"PYTHONHTTPSVERIFY",
 			"SMDR",
+			"Wsmdr",
+			"authorised",
 			"chdir",
+			"cmds",
 			"cmdurl",
 			"firl",
+			"flexpage",
+			"fqcs",
+			"fqdn",
+			"gethostbyname",
+			"geti",
+			"hdrs",
+			"initialises",
 			"ipecs",
-			"ipxapi"
+			"ipxapi",
+			"rsps"
 		]
 	}
 }

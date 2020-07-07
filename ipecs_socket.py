@@ -36,7 +36,7 @@ class ipecs_web_socket:
         async for message in websocket:
             self.__log.info (self.__res['wss002'].format(message))
             
-    async def consume (self) -> None:
+    async def wss_listener (self) -> None:
         async with websockets.connect (self.__wssurl) as websocket:
             self.__log.info (self.__res['wss002'].format(self.__wssurl))
             await self.ipecs_handler (websocket)
