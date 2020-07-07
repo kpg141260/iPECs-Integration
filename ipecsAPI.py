@@ -26,6 +26,7 @@ class ipecsAPI:
     __cnf = {}
     __res = {}
     __cmds = {}
+    __ipecs = {}
     __hdrs = {}
     __rsps = {}
     __ops  = {}
@@ -41,7 +42,7 @@ class ipecsAPI:
 
 # Initialise
     """
-    Function initialises ipecsAPI class.
+    Function __init__ initialises ipecsAPI class.
     
     Parameters
     ----------
@@ -50,7 +51,7 @@ class ipecsAPI:
 
     The function will raise an exception if anything goes wrong.
     """
-    def __init__ (self, f_name='ipecs.conf', log_id='iPECsAPI'):
+    def __init__ (self, f_name='ipecs.conf', log_id='iPECsAPI') -> None:
         self.__f_log = ''
         self.__f_name = f_name
         # Load json configuration file
@@ -103,7 +104,7 @@ class ipecsAPI:
 
 # Configure Logger
     """
-    Function config_logger.
+    Function config_logger()  -> logging.Logger.
     
     Parameters
     ----------
@@ -113,7 +114,7 @@ class ipecsAPI:
     and 1 to a log file. the formatting for the loggers are all defined in the configuration file specified in the 
     __init__ function.
     """
-    def config_logger (self, id):
+    def config_logger (self, id) -> logging.Logger:
         try:
             truncated = False
             f_log = os.path.join (os.getcwd(), self.__cnf['log']['log-path'], self.__cnf['log']['log-file'])
@@ -185,7 +186,7 @@ class ipecsAPI:
 
 # Load Resource File
     """
-    Function loadResourceFile.
+    Function loadResourceFile() -> None.
     
     Parameters
     ----------
@@ -193,7 +194,7 @@ class ipecsAPI:
 
     The function loads the language resource file defined in the configuration file specified in the __init__ function.
     """
-    def loadResourceFile (self):
+    def loadResourceFile (self) -> None:
         try:
             f_res = os.path.join (os.getcwd(), self.__cnf['resource']['resource-file'])
             # Check if resource-file exists
@@ -213,7 +214,7 @@ class ipecsAPI:
 
 # Load iPECs Commands and Headers File
     """
-    Function loadCommandsFile.
+    Function loadCommandsFile() -> None.
     
     Parameters
     ----------
@@ -221,7 +222,7 @@ class ipecsAPI:
 
     The function loads the language resource file defined in the configuration file specified in the __init__ function.
     """
-    def loadCommandsFile (self):
+    def loadCommandsFile (self) -> None:
         try:
             f_cmd = os.path.join (os.getcwd(), self.__cnf['resource']['commands-file'])
             # Check if resource-file exists
@@ -230,11 +231,11 @@ class ipecsAPI:
             with open (f_cmd, 'r') as json_file:
                 data = json_file.read()
             # Parse file data
-            stuff = json.loads(data)
-            self.__cmds = stuff['commands']
-            self.__hdrs = stuff['headers']
-            self.__rsps = stuff['responses']
-            self.__ops  = stuff['op-codes']
+            self.__ipecs = json.loads(data)
+            self.__cmds = self.__ipecs['commands']
+            self.__hdrs = self.__ipecs['headers']
+            self.__rsps = self.__ipecs['responses']
+            self.__ops  = self.__ipecs['op-codes']
             self.__log.info (self.__res['msg']['msg002'].format (f_cmd))
             del f_cmd
 
@@ -245,7 +246,7 @@ class ipecsAPI:
 
 # Get Base URI from Config File
     """
-    Function getBaseURI.
+    Function getBaseURI() -> string.
     
     Parameters
     ----------
@@ -254,14 +255,14 @@ class ipecsAPI:
     The function generates, stores locally and returns the base URI pointing the the iPECs API server.
     The parameters are defined in the configuration file specified in the __init__ function.
     """
-    def getBaseURI (self):
+    def getBaseURI (self) -> str:
         self.__baseURI = "{}:{}/{}/".format(self.__cnf['URI']['BaseURI'],self.__cnf['URI']['Port'],self.__cnf['URI']['type'])
         self.__log.debug ((self.__res['dbg']['dbg001']).format (self.__baseURI))
         return (self.__baseURI)
 
 # Get Full URI from Config File
     """
-    Function getFullURI.
+    Function getFullURI() -> string.
     
     Parameters
     ----------
@@ -274,7 +275,7 @@ class ipecsAPI:
 
     The parameters for the function are defined in the configuration file specified in the __init__ function.
     """
-    def getFullURI (self, user='admin'):
+    def getFullURI (self, user='admin') -> str:
         if user == 'admin':
             self.__fullURI = "{}{}/{}/users/".format(self.getBaseURI(), self.__cnf['URI']['target'], self.__cnf['URI']['APIVersion'])
         else:
@@ -284,7 +285,7 @@ class ipecsAPI:
 
 # Get base WSS (secure socket address)
     """
-    Function getbaseWSS.
+    Function getbaseWSS() -> string.
     
     Parameters
     ----------
@@ -296,7 +297,7 @@ class ipecsAPI:
     ----------
     web socket connection string : <string> web socket address in the form of wss://192.192.192.2:6666/ipxapi
     """
-    def getbaseWSS (self):
+    def getbaseWSS (self) -> str:
         try:
             if not self.__hasServerIP:
                 self.getiPECsServerIP
@@ -308,11 +309,12 @@ class ipecsAPI:
 
 # Provide logging pointer
     """
-    Function getlogger.
+    Function getlogger() -> dictionary.
     
     Parameters
     ----------
-    none : nil.
+    section :   <str> specifies the sub-section of the dictionary to return.
+                default is to return all sections.
 
     The function returns a fully formatted and configured object of type <logging.Logger> to be used to log events.
     """
@@ -323,13 +325,14 @@ class ipecsAPI:
 
 # Provide pointer to language resource file
     """
-    Function getResources.
+    Function getResources() -> dictionary.
     
     Parameters
     ----------
-    none : nil.
+    section :   <str> specifies the sub-section of the dictionary to return.
+                default is to return all sections.
 
-    The function returns an object of type {json} containing the language strings.
+    The function returns an object of type {dict} containing the language strings.
     """
     def getResources (self, section=None) -> dict:
         if not self.__isInitialised:
@@ -343,13 +346,14 @@ class ipecsAPI:
 
 # Provide pointer to configuration file
     """
-    Function getConfiguration.
+    Function getConfiguration() -> dictionary.
     
     Parameters
     ----------
-    none : nil.
+    section :   <str> specifies the sub-section of the dictionary to return.
+                default is to return all sections.
 
-    The function returns an object of type {json} containing the configuration settings.
+    The function returns an object of type {dict} containing the configuration settings.
     """
     def getConfiguration (self, section=None) -> dict:
         if not self.__isInitialised:
@@ -363,15 +367,15 @@ class ipecsAPI:
 
 # Provide pointer to ipecs commands
     """
-    Function getCommands.
+    Function getCommands() -> dictionary.
     
     Parameters
     ----------
     none : nil.
 
-    The function returns an object of type {json} containing the iPECs commands.
+    The function returns an object of type {dict} containing the iPECs commands.
     """
-    def getCommands (self):
+    def getCommands (self) -> dict:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
         return self.__cmds
@@ -386,7 +390,7 @@ class ipecsAPI:
 
     The function returns an object of type {json} containing the iPECs http header strings needed for command execution.
     """
-    def getHeaders (self):
+    def getHeaders (self) -> dict:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
         return self.__hdrs
@@ -401,7 +405,7 @@ class ipecsAPI:
 
     The function returns an object of type {json} containing the iPECs http response types generated by command execution.
     """
-    def getResponses (self):
+    def getResponses (self) -> dict:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
         return self.__hdrs
@@ -416,10 +420,31 @@ class ipecsAPI:
 
     The function returns an object of type {json} containing the iPECs command operation codes.
     """
-    def getOpCodes (self):
+    def getOpCodes (self) -> dict:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
         return self.__ops
+
+# Provide pointer to iPECs command related info
+    """
+    Function getiPECsCommands() -> dictionary.
+    
+    Parameters
+    ----------
+    section :   <str> specifies the sub-section of the dictionary to return.
+                default is to return all sections.
+
+    The function returns an object of type {dict} containing the language strings.
+    """
+    def getiPECsCommands (self, section=None) -> dict:
+        if not self.__isInitialised:
+            raise RuntimeError (self.__notInitErr)
+        if section is None:
+            return self.__ipecs
+        for key in self.__ipecs.items():
+            if key[0] == section:
+                return self.__ipecs[section]
+        raise KeyError (self.__res['err']['err002'].format(section))
 
 # Get IP address of ipecs server
     """
@@ -522,7 +547,7 @@ class ipecsAPI:
 
 # Helper function to log error message received from iPECs API
     """
-    Function logErrorMsg logs an error received from iPECsAPI to log file.
+    Function logErrorMsg() -> None logs an error received from iPECsAPI to log file.
     The function will raise an exception if the expected keys cannot be found in the error response.
     
     Parameters
@@ -533,7 +558,7 @@ class ipecsAPI:
     ----------
     None:    
     """
-    def logErrorMsg (self, response):
+    def logErrorMsg (self, response) -> None:
         try:
             json = response.json()
             msg = self.__res['ipecs']['error'].format(json['error']['code'], json['error']['message'])
@@ -542,8 +567,25 @@ class ipecsAPI:
             self.__log.error (self.__res['err']['err002'].format(ex))
             raise KeyError (ex)
 
-# Function to compile and send simple command to iPECs API
-    def sendCommand (self, command, opcode=None, user=None, pw=None, arg1=None, arg2=None, arg3=None, arg4=None):
+# Function filters, prepares parameters and sends command to be send to iPECs API to appropriate command function
+    """
+    Function sendCommand() -> dictfilters, prepares parameters and sends command to be send to iPECs API to appropriate command function.
+    If there is an error the function will raise an Exception - you need to check log file to see error details.
+    
+    Parameters
+    ----------
+    command :   <str> [required] the code of the main command to be used. Valid command codes can be found in ipecs_commands.json
+    opcode :    <str> [optional] the sub-code (parameter string) of the main command to be used. Valid command op-codes can be found in ipecs_commands.json
+    user :      <str> [optional] the user account to be used for this command - the user should be the same user as has been logged in before.
+    pw :        <str> [optional] the password for the user account to be used for this command - only required when logging user in for the first time.
+    arg1-arg4 : <str> [optional] optional parameters required by command to be executed.
+
+    Returns:
+    ----------
+    dict:   <json> json dictionary if command returns data otherwise None.
+    """
+
+    def sendCommand (self, command, opcode=None, user=None, pw=None, arg1=None, arg2=None, arg3=None, arg4=None) -> json:
         # The class is not properly initialised, cannot function - raise exception
         if not self.__isInitialised:
             raise RuntimeError (self.__cnf['ipecs']['err002'].format(command, self.__cnf['resource']['commands-file'], "commands"))
@@ -589,7 +631,21 @@ class ipecsAPI:
             raise ex
 
 # Send login command to iPECs Server API
-    def login (self, user, pw):
+    """
+    Function login() -> bool sends the login command to the iPECs API.
+    If there is an error the function will raise an Exception - you need to check log file to see error details.
+    
+    Parameters
+    ----------
+    user :  the user account to be used for this command.
+    pw:     the password for the user account to be logged in     
+
+    Returns:
+    ----------
+    bool:   True if user has been successfully logged in,
+            False if user has not been logged in.
+    """
+    def login (self, user, pw) -> bool:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
         if self.__isLoggedIn or user is None:
@@ -598,7 +654,6 @@ class ipecsAPI:
         try:
             cmd = self.__cmds['login'].format(self.__fullURI, user)
             self.__log.debug (self.__res['inf']['inf002'].format(cmd))
-            # self.__log.debug ("Request Header: {}".format(self.__cnf['header']))
             try:
                 retries = self.__cnf['URI']['login-retries']
                 if retries <= 0: retries = 1
@@ -625,9 +680,24 @@ class ipecsAPI:
             self.__log.error (self.__res['err']['err002'].format (ex))
         except Exception as ex:
             self.__log.fatal (ex)
+        finally:
+            return self.__isLoggedIn
 
 # Send logout command to iPECs Server API
-    def logout (self, user='admin'):
+    """
+    Function logout() -> bool sends the logout command to the iPECs API.
+    If there is an error the function will raise an Exception - you need to check log file to see error details.
+    
+    Parameters
+    ----------
+    user :      the user account to be used for this command - the user should be the same user as has been logged in before.
+
+    Returns:
+    ----------
+    bool:   True if user has been successfully logged out,
+            False if user has not been logged out.
+    """
+    def logout (self, user='admin') -> bool:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
         if not self.__isLoggedIn or user is None:
@@ -636,12 +706,12 @@ class ipecsAPI:
         try:
             cmd = self.__cmds['logout'].format(self.__fullURI, user)
             self.__log.debug (self.__res['inf']['inf002'].format(cmd))
-            # self.__log.debug ("Request Header: {}".format(self.__cnf['header']))
             try:
                 hed = {}
                 hed['Authorization'] = 'Bearer ' + self.__sessiontoken
                 response = requests.post(cmd, headers=hed, verify=self.__cnf['URI']['verify'])
                 self.__httpCheckResponse (response, cmd)
+                self.__isLoggedIn = False
             except urllib3.exceptions.InsecureRequestWarning as ex:
                 self.__log.error (ex)
             except requests.exceptions.SSLError as ex:
@@ -653,6 +723,7 @@ class ipecsAPI:
         except Exception as ex:
             self.__log.critical (ex)
         finally:
+            return not self.__isLoggedIn
             del cmd
     
 # Send SMDR command to iPECs Server API
@@ -672,8 +743,7 @@ class ipecsAPI:
     ----------
     JSON object: The JSON object that was return by the server or None.
     """
-
-    def __smdr (self, user=None, params=None):
+    def __smdr (self, user=None, params=None) -> json:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
         if not self.__isLoggedIn or user is None:
@@ -684,9 +754,7 @@ class ipecsAPI:
             self.__log.debug (self.__res['inf']['inf002'].format(cmd))
             # self.__log.debug ("Request Header: {}".format(self.__cnf['header']))
             try:
-                hed = {}
-                hed['Authorization'] = 'Bearer ' + self.__sessiontoken
-                response = requests.get (cmd, headers=hed, params=params, verify=self.__cnf['URI']['verify'])
+                response = requests.get (cmd, headers='Bearer ' + self.__sessiontoken, params=params, verify=self.__cnf['URI']['verify'])
                 self.__httpCheckResponse (response, cmd)
                 json = response.json()
                 return json

@@ -10,6 +10,7 @@ The function of the iPECs API wrapper is to establish a connection to a iPECs se
 
 | Module | Description | Installation |
 | ----------- | ----------- | ----------- |
+| Python | Version 3.8> | ```https://www.python.org/downloads/```|
 | websockets | is a library for building WebSocket servers and clients in Python with a focus on correctness and simplicity | ```pip3 install websockets``` |
 | requests | The requests library is the de facto standard for making HTTP requests in Python | ```pip3 install requests``` |
 | urllib3 | urllib3 is a powerful, sanity-friendly HTTP client for Python. | ```pip3 install urllib3``` |
@@ -21,4 +22,39 @@ The function of the iPECs API wrapper is to establish a connection to a iPECs se
 | socket | This module provides access to the BSD socket interface. It is available on all modern Unix systems, Windows, MacOS, and probably additional platforms | ```Part of Python``` |
 | logging | This module defines functions and classes which implement a flexible event logging system for applications and libraries | ```Part of Python``` |
 
-##
+## Functional Overview
+The **iPECs API Wrapper (Wrapper)** establishes communication with a server running the iPECs Contact Center Software and handles all requests as well as web socket communications with that server.
+
+### Wrapper Framework
+The Wrapper has been designed to run as *Middle Ware* on a server environment. Being designed in Python, it can run on any platform that supports Python Version 3.8 or later.
+Since the Wrapper does not support any kind of direct user input, it has to be configured using [configuration information](#config) stored in permanent manner. At this point the implementation of configuration is through JSON files. At a later state the Wrapper might use a database such as Mongo to store the majority of the [configuration info](#config), but there still will be a dependance on a small [configuration file](#config).
+
+### Wrapper Launch Functionality
+When first invoked by a control software the wrapper will go through its self-initialisation process. During this process it loads:
+- the  [Configuration File](#config),
+- the [Language Resource File](#resource),
+- the [iPECS Commands Resources File](#ipecs),
+- launches an [Event Logger](#logger),
+- configures any URLs required, handles
+- tries to establish communication with the specified iPECs host server.
+
+The Wrapper supports event logging into a log file.
+
+## Support Files
+### <a name="conf">Configuration File</a>
+
+### <a name="resource">Language Resource File</a>
+
+### <a name="ipecs">iPECs Command File</a>
+
+### <a name="logger">Event Log Function</a>
+
+## Function Overview
+
+## TODO List
+- [ ] add configuration file info
+- [ ] add resource file info
+- [ ] add command file info
+- [ ] add event logger info
+- [ ] add links to references within document
+- [ ] add list of functions plus syntax
