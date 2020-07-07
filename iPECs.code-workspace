@@ -6,13 +6,13 @@
 	],
 	"settings": {
 		"cSpell.words": [
-			"Dsmdr",
 			"Initialisation",
 			"Initialised",
 			"KHTML",
 			"PYTHONHTTPSVERIFY",
 			"SMDR",
 			"Wsmdr",
+			"asyncio",
 			"authorised",
 			"chdir",
 			"cmds",
@@ -27,7 +27,8 @@
 			"initialises",
 			"ipecs",
 			"ipxapi",
-			"rsps"
+			"rsps",
+			"wssurl"
 		]
 	}
 }

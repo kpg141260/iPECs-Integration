@@ -723,8 +723,8 @@ class ipecsAPI:
         except Exception as ex:
             self.__log.critical (ex)
         finally:
-            return not self.__isLoggedIn
             del cmd
+            return not self.__isLoggedIn
     
 # Send SMDR command to iPECs Server API
     """
@@ -743,7 +743,7 @@ class ipecsAPI:
     ----------
     JSON object: The JSON object that was return by the server or None.
     """
-    def __smdr (self, user=None, params=None) -> json:
+    def __smdr (self, user=None, params=None) -> dict:
         if not self.__isInitialised:
             raise RuntimeError (self.__notInitErr)
         if not self.__isLoggedIn or user is None:
