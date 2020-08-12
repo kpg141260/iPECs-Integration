@@ -1,0 +1,205 @@
+{
+    "commands": {
+        "login":            "{0}{1}/login",
+        "logout":           "{0}{1}/logout",
+        "checkconnection":  "{0}/users/{}/checkconnection",
+        "smdr":             "{0}{1}/smdr",
+        "acd":              "{0}{1}/acd",
+        "monitor":          "{0}{1}/call/monitor",
+        "presence":         "{0}{1}/call/presence",
+        "mwi":              "{0}{1}/call/mwi",
+        "flexpage":         "{0}{1}/call/flexpage",
+        "agent_logon":      "{0}{1}/call/agent_logon",
+        "agent_logoff":     "{0}{1}/call/agent_logoff",
+        "agent_state":      "{0}{1}/call/agent_state"
+    },
+    "op-codes": {
+        "smdr-get-record-count":    {"countOnly": "true"},
+        "smdr-get-record-all":      {"countOnly": "false", "maxCount": 0},
+        "smdr-get-record-num":      {"maxCount": 0}
+    },
+    "headers": {
+        "hdr_login": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language": "en-GB,en;q=0.9,en-US;q=0.8",
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "Content-type": "application/json",
+            "DNT": "1",
+            "Pragma": "no-cache",
+            "Referrer": "https://srsupply.fortiddns.com:8743/apidemo.html",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-Mode": "cors",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36 Edg/83.0.478.45"
+        },
+        "hdr_logout": {
+            "Authorization": "bearer {0}"
+        }, 
+        "hdr_checkconnection": {
+            "Authorization": "bearer {0}"
+        },
+        "hdr_auth": "Authorization: bearer {0}",
+        "hdr_wss": {
+            "Authorization": "bearer {0}", 
+            "Upgrade": "WebSocket",
+            "Origin": "{0}:{1}"
+        }
+    },
+    "responses": {
+        "error": {
+            "code:": 0,
+            "message": ""
+        },
+        "rsp_login": {
+                "token": "", 
+                "checkConnectionTimer": 0,
+                "systemType": "",
+                "systemVersion": "", 
+                "apiVersion": ""
+        },
+        "event-data": {
+            "event": "acd", 
+            "data": {
+                "time":"", 
+                "callRefID": 0, 
+                "eventCode": 0, 
+                "eventString": "", 
+                "sourceType":"", 
+                "sourceNumber": "", 
+                "destType": "", 
+                "destNumber": "", 
+                "data1":"", 
+                "data2":""
+            }
+        }
+    },
+    "error-codes": {
+        "1": "Parameter error",
+        "2": "Version error",
+        "3": "License error",
+        "4": "Login information mismatch",
+        "101": "Authentication failure"
+    },
+    "event-codes": {
+        "1": "Station Busy",
+        "2": "Station Idle",
+        "3": "Station Ringing",
+        "11": "Agent primary logged in",
+        "12": "Agent primary logged out",
+        "13": "Agent UCD unavailable",
+        "14": "Agent UCD available",
+        "15": "Agent UCD Wrap-up started",
+        "16": "Agent Wrap-up ended",
+        "17": "Station busy",
+        "18": "Station idle",
+        "19": "Station DND active",
+        "20": "Station DND inactive",
+        "21": "Station forward active",
+        "22": "Station forward inactive",
+        "23": "Supervisor logged in",
+        "24": "Supervisor logged out",
+        "25": "Agent secondary logged in",
+        "26": "Agent secondary logged out",
+        "41": "Station seized",
+        "42": "Station seized ACK/CONNECT/ANSWER",
+        "43": "Station seized NAK/ABANDON",
+        "44": "Disconnected",
+        "45": "Station added to conference",
+        "46": "Conference parked - not yet implemented",
+        "47": "Executive override - not yet implemented",
+        "49": "Station on hold",
+        "50": "Station recalled hold",
+        "51": "Station added to hunt group",
+        "52": "Page all",
+        "53": "Page external",
+        "54": "Page internal",
+        "55": "Park group",
+        "56": "Park personal - not yet implemented",
+        "57": "Call picked up",
+        "58": "Call on transfer hold",
+        "59": "UCD Group",
+        "60": "UCD no answer to",
+        "61": "UCD overflow to",
+        "62": "UCD Queue hold to",
+        "63": "VM Group",
+        "64": "UCD Help",
+        "65": "UCD call qualifier - not yet implemented",
+        "66": "Station ringing",
+        "67": "Outbound number dialed",
+        "68": "SMDR",
+        "70": "Transfer complete",
+        "71": "Incoming DID info",
+        "72": "Incoming caller info",
+        "73": "CONNECT TX VOICE INFO",
+        "74": "CONNECT RX VOICE INFO",
+        "75": "CONNECT TX VIDEO INFO",
+        "76": "CONNECT RX VIDEO INFO",
+        "77": "ACD INFO CHANGED",
+        "80": "INCOMING DIGIT INFO",
+        "81": "AGENT HOT-DESK LOGIN",
+        "82": "AGENT OUT OF SERVICE",
+        "83": "AGENT HOT-DESK LOGOUT",
+        "84": "AGENT IN SERVICE",
+        "85": "SMDR ACCOUNT CODE",
+        "86": "SMDR AUTHORIZATION CODE",
+        "87": "SMDR COST",
+        "88": "SMDR INCOMING",
+        "89": "SMDR ICM",
+        "90": "SMDR CALL TYPE"
+    },
+    "call-types": {
+        "0":  "SMDR Off hook",
+        "1":  "SMDR Incoming Call Transfer",
+        "2":  "SMDR Incoming Call",
+        "3":  "SMDR Outgoing Call",
+        "4":  "SMDR Outgoing Call Transfer",
+        "5":  "SMDR Hold Call Lost",
+        "6":  "SMDR Ringing Call Lost",
+        "7":  "SMDR Group Call Lost",
+        "8":  "SMDR ICM Call",
+        "9":  "SMDR ICM SMS",
+        "10": "SMDR ICM Paging",
+        "11": "SMDR Outgoing Unanswered",
+        "12": "SMDR Bar Charge",
+        "13": "SMDR Voice Mail",
+        "14": "SMDR Net Outgoing",
+        "15": "SMDR Net Incoming"
+    },
+    "conf-action-types": {
+        "1": "Conference terminated",
+        "2": "Participant entered conference",
+        "3": "Participant exited conference"
+    },
+    "call-forward-types": {
+        "1":  "Unconditional forward",
+        "2":  "Station Offnet",
+        "3":  "CO Line Offnet",
+        "4":  "CO Group Offnet",
+        "5":  "CO All Offnet",
+        "6":  "UCD Unconditional",
+        "7":  "Hunt Unconditional",
+        "8":  "Voicemail unconditional",
+        "17": "Forward when no answer",
+        "22": "UCD No Answer",
+        "23": "Hunt no answer",
+        "24": "Voicemail no answer",
+        "33": "Forward when station is busy",
+        "38": "UCD Busy",
+        "39": "Hunt busy",
+        "40": "Voicemail busy",
+        "49": "Station No Answer or Busy",
+        "54": "UCD No Answer or Busy",
+        "55": "Hunt no answer or busy",
+        "56": "Voicemail no answer or busy"
+    },
+    "ringing-types": {
+        "0": "Ring Speed Dial",
+        "2": "Ring One or More Phones",
+        "4": "Ring Hunt Group",
+        "3": "Ring Voice mail Group",
+        "5": "Ring UCD Group",
+        "6": "Ring To Modem"
+    }
+}
+
