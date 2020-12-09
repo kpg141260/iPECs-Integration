@@ -1,0 +1,988 @@
+2020-11-13:19:06:28,343  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-13:19:06:28,344  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-13:19:06:28,345  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-13:19:06:28,346  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-13:19:06:28,347  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.005974 seconds.
+2020-11-13:19:06:28,347  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:19:06:28,348  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:19:06:28,349  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-13:19:06:28,587  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-13:19:06:28,588  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-13:19:06:28,609  INFO     [iPECsAPI.dbConnect:107] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-13:19:06:28,624  INFO     [iPECsAPI.dbConnect:134] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-13:19:06:28,625  DEBUG    [iPECsAPI.__init__:43] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-13:19:06:28,639  DEBUG    [iPECsAPI.run:346] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-13:19:06:28,640  INFO     [iPECsAPI._init_Reset_Timer:586] Next call counter reset on [2020-11-13] at [22:00:00].
+2020-11-13:19:06:28,644  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.303682 seconds.
+2020-11-13:19:06:42,420  DEBUG    [iPECsAPI.sendCommand:777] ->> received request to execute iPECs [login] command.
+2020-11-13:19:06:42,423  DEBUG    [iPECsAPI.login:838] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-13:19:06:42,424  INFO     [iPECsAPI.login:847] Logging into iPECs API ->> attempt #1
+2020-11-13:19:06:42,735  INFO     [iPECsAPI._httpCheckResponse:738] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-13:19:06:42,741  INFO     [iPECsAPI.login:896] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-13:19:06:42,743  INFO     [iPECsAPI.login:908] Elapsed time for login operation is 0.3200 seconds.
+2020-11-13:19:06:50,884  INFO     [iPECsAPI.startSocketListener:1135] Server at [129.126.242.41:8743] is reachable.
+2020-11-13:19:06:50,885  DEBUG    [iPECsAPI.startSocketListener:1138] Trying to establish WEB Socket connection...
+2020-11-13:19:06:55,653  INFO     [iPECsAPI.startSocketListener:1143] Web socket to [129.126.242.41] established.
+2020-11-13:19:06:57,309  DEBUG    [iPECsAPI._ipecsSocketListener:1184] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer ZT5DqF3s_F8geIHkseXgpVUnnNnZp0GfcV90kqbnaDE', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-13:19:07:35,988  DEBUG    [iPECsAPI.addStation:1571] Station [1808] added to station list.
+2020-11-13:19:07:35,993  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:07:39,211  DEBUG    [iPECsAPI.addEvent:1681] ACD Agent login to station [1808].
+2020-11-13:19:07:39,216  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:08:29,193  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:10:13,438  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:11:24,732  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:11:52,84   DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:12:10,599  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:13:00,819  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:13:15,558  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:20:08,602  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-13:19:20:08,603  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-13:19:20:08,606  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-13:19:20:08,608  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-13:19:20:08,609  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.008792 seconds.
+2020-11-13:19:20:08,610  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:19:20:08,610  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:19:20:08,611  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-13:19:20:08,856  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-13:19:20:08,858  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-13:19:20:08,880  INFO     [iPECsAPI.dbConnect:107] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-13:19:20:08,895  INFO     [iPECsAPI.dbConnect:134] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-13:19:20:08,896  DEBUG    [iPECsAPI.__init__:43] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-13:19:20:08,901  DEBUG    [iPECsAPI.run:346] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-13:19:20:08,910  INFO     [iPECsAPI._init_Reset_Timer:586] Next call counter reset on [2020-11-13] at [22:00:00].
+2020-11-13:19:20:08,913  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.313377 seconds.
+2020-11-13:19:20:15,120  DEBUG    [iPECsAPI.sendCommand:777] ->> received request to execute iPECs [login] command.
+2020-11-13:19:20:15,124  DEBUG    [iPECsAPI.login:838] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-13:19:20:15,126  INFO     [iPECsAPI.login:847] Logging into iPECs API ->> attempt #1
+2020-11-13:19:20:15,239  INFO     [iPECsAPI._httpCheckResponse:738] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-13:19:20:15,247  INFO     [iPECsAPI.login:896] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-13:19:20:15,250  INFO     [iPECsAPI.login:908] Elapsed time for login operation is 0.1258 seconds.
+2020-11-13:19:20:15,255  INFO     [iPECsAPI.startSocketListener:1135] Server at [129.126.242.41:8743] is reachable.
+2020-11-13:19:20:15,257  DEBUG    [iPECsAPI.startSocketListener:1138] Trying to establish WEB Socket connection...
+2020-11-13:19:20:20,546  INFO     [iPECsAPI.startSocketListener:1143] Web socket to [129.126.242.41] established.
+2020-11-13:19:20:27,927  DEBUG    [iPECsAPI._ipecsSocketListener:1184] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer aaY6RfiFRX_aL-rflMlRsshk6DO7qHrwqOsyJE9ubmQ', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-13:19:20:37,115  DEBUG    [iPECsAPI.addStation:1571] Station [1808] added to station list.
+2020-11-13:19:20:37,119  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:20:40,335  DEBUG    [iPECsAPI.addEvent:1681] ACD Agent login to station [1808].
+2020-11-13:19:20:40,340  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:21:14,525  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:21:34,586  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:21:34,591  DEBUG    [iPECsAPI.addStation:1571] Station [1809] added to station list.
+2020-11-13:19:21:34,595  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:21:34,600  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:21:34,634  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:21:34,733  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:21:43,556  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:21:43,561  DEBUG    [iPECsAPI.emit_call_notification:932] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:19:21:43,575  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:23:43,656  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:23:43,668  DEBUG    [iPECsAPI.addEvent:1717] Station [1809] wrap-up started
+2020-11-13:19:23:43,676  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:23:43,776  DEBUG    [iPECsAPI.addEvent:1742] Station [1809] is ringing.
+2020-11-13:19:23:43,883  WARNING  [iPECsAPI.iPECsEventParser:1368] iPECs server event data returned is not supported! Event Data: [{'delay': 0, 'data': {'time': '2020/11/13 19:23:43', 'callRefID': 5000, 'eventCode': 44, 'eventString': 'DISCONNECT', 'sourceType': 'Station', 'sourceNumber': '', 'destType': '', 'destNumber': 1809, 'data1': '0000', 'data2': '    '}}], Error: [invalid literal for int() with base 10: ''].
+2020-11-13:19:30:30,168  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:30:30,377  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:30:30,391  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:31:02,918  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:31:05,67   DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:31:05,88   DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:31:05,111  DEBUG    [iPECsAPI.emit_call_notification:932] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:19:31:09,232  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:31:09,236  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:33:05,180  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:33:05,184  DEBUG    [iPECsAPI.addEvent:1717] Station [1809] wrap-up started
+2020-11-13:19:33:25,395  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:33:25,401  DEBUG    [iPECsAPI.addEvent:1742] Station [1809] is ringing.
+2020-11-13:19:33:25,506  WARNING  [iPECsAPI.iPECsEventParser:1368] iPECs server event data returned is not supported! Event Data: [{'delay': 0, 'data': {'time': '2020/11/13 19:33:25', 'callRefID': 5000, 'eventCode': 44, 'eventString': 'DISCONNECT', 'sourceType': 'Station', 'sourceNumber': '', 'destType': '', 'destNumber': 1809, 'data1': '0000', 'data2': '    '}}], Error: [invalid literal for int() with base 10: ''].
+2020-11-13:19:36:36,327  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:36:46,87   DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:36:54,893  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:36:54,902  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:37:00,176  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:37:03,765  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:37:05,562  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:37:05,566  DEBUG    [iPECsAPI.emit_call_notification:932] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:19:37:05,584  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:37:17,314  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:37:19,160  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:37:19,167  DEBUG    [iPECsAPI.addEvent:1717] Station [1809] wrap-up started
+2020-11-13:19:37:20,610  DEBUG    [iPECsAPI.addEvent:1742] Station [1809] is ringing.
+2020-11-13:19:42:12,496  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-13:19:42:12,501  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-13:19:42:12,502  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-13:19:42:12,506  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-13:19:42:12,509  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.012975 seconds.
+2020-11-13:19:42:12,510  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:19:42:12,510  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:19:42:12,511  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-13:19:42:12,692  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-13:19:42:12,694  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-13:19:42:12,714  INFO     [iPECsAPI.dbConnect:107] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-13:19:42:12,734  INFO     [iPECsAPI.dbConnect:134] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-13:19:42:12,746  DEBUG    [iPECsAPI.__init__:43] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-13:19:42:12,748  DEBUG    [iPECsAPI.run:346] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-13:19:42:12,760  INFO     [iPECsAPI._init_Reset_Timer:586] Next call counter reset on [2020-11-13] at [22:00:00].
+2020-11-13:19:42:12,766  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.271596 seconds.
+2020-11-13:19:42:35,327  DEBUG    [iPECsAPI.sendCommand:777] ->> received request to execute iPECs [login] command.
+2020-11-13:19:42:35,329  DEBUG    [iPECsAPI.login:838] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-13:19:42:35,330  INFO     [iPECsAPI.login:847] Logging into iPECs API ->> attempt #1
+2020-11-13:19:42:35,451  INFO     [iPECsAPI._httpCheckResponse:738] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-13:19:42:35,456  INFO     [iPECsAPI.login:896] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-13:19:42:35,458  INFO     [iPECsAPI.login:908] Elapsed time for login operation is 0.1299 seconds.
+2020-11-13:19:42:35,463  INFO     [iPECsAPI.startSocketListener:1135] Server at [129.126.242.41:8743] is reachable.
+2020-11-13:19:42:35,464  DEBUG    [iPECsAPI.startSocketListener:1138] Trying to establish WEB Socket connection...
+2020-11-13:19:42:41,546  DEBUG    [iPECsAPI._ipecsSocketListener:1184] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer Aade-LftysSot3GVcTyd6o3fRt6drXVJ5hn1NlORu08', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-13:19:42:41,547  INFO     [iPECsAPI.startSocketListener:1143] Web socket to [129.126.242.41] established.
+2020-11-13:19:43:37,960  DEBUG    [iPECsAPI.addStation:1571] Station [1809] added to station list.
+2020-11-13:19:43:37,969  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:43:55,660  DEBUG    [iPECsAPI.addEvent:1681] ACD Agent login to station [1809].
+2020-11-13:19:43:55,662  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:44:13,73   DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:44:14,675  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:44:15,510  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:44:16,350  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:44:18,158  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:44:19,31   DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:44:19,33   DEBUG    [iPECsAPI.emit_call_notification:932] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:19:44:19,51   DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:44:40,597  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:44:45,129  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:44:45,134  DEBUG    [iPECsAPI.addEvent:1717] Station [1809] wrap-up started
+2020-11-13:19:44:49,9    DEBUG    [iPECsAPI.addEvent:1742] Station [1809] is ringing.
+2020-11-13:19:45:04,970  DEBUG    [iPECsAPI.emit_call_notification:932] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-13:19:45:07,578  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:46:12,299  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:46:12,506  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:46:12,517  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:46:12,519  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:46:12,536  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:46:12,668  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:46:12,705  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:46:12,708  DEBUG    [iPECsAPI.emit_call_notification:932] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:19:46:12,722  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:46:22,729  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:46:22,740  DEBUG    [iPECsAPI.addEvent:1717] Station [1809] wrap-up started
+2020-11-13:19:46:22,749  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:46:22,847  DEBUG    [iPECsAPI.addEvent:1742] Station [1809] is ringing.
+2020-11-13:19:46:22,957  DEBUG    [iPECsAPI.emit_call_notification:932] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-13:19:46:22,979  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:47:27,791  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:47:27,998  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:47:28,14   DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:47:28,31   DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:47:28,32   DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:47:28,146  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:47:28,158  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:47:28,160  DEBUG    [iPECsAPI.emit_call_notification:932] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:19:47:28,172  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:47:38,179  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:47:38,183  DEBUG    [iPECsAPI.addEvent:1717] Station [1809] wrap-up started
+2020-11-13:19:47:38,200  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:47:38,288  DEBUG    [iPECsAPI.addEvent:1742] Station [1809] is ringing.
+2020-11-13:19:47:38,396  DEBUG    [iPECsAPI.emit_call_notification:932] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-13:19:48:52,235  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:55:59,519  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-13:19:55:59,520  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-13:19:55:59,521  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-13:19:55:59,522  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-13:19:55:59,523  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.005546 seconds.
+2020-11-13:19:55:59,524  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:19:55:59,525  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:19:55:59,526  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-13:19:55:59,773  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-13:19:55:59,775  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-13:19:55:59,805  INFO     [iPECsAPI.dbConnect:107] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-13:19:55:59,819  INFO     [iPECsAPI.dbConnect:134] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-13:19:55:59,819  DEBUG    [iPECsAPI.__init__:43] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-13:19:55:59,833  INFO     [iPECsAPI._init_Reset_Timer:586] Next call counter reset on [2020-11-13] at [22:00:00].
+2020-11-13:19:55:59,836  DEBUG    [iPECsAPI.run:346] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-13:19:55:59,839  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.322080 seconds.
+2020-11-13:19:56:05,291  DEBUG    [iPECsAPI.sendCommand:777] ->> received request to execute iPECs [login] command.
+2020-11-13:19:56:05,294  DEBUG    [iPECsAPI.login:838] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-13:19:56:05,295  INFO     [iPECsAPI.login:847] Logging into iPECs API ->> attempt #1
+2020-11-13:19:56:05,438  WARNING  [iPECsAPI.login:872] iPECs API reports user is already logged in. Trying to logout user before continuing.
+2020-11-13:19:56:05,440  INFO     [iPECsAPI._getSessionToken:463] Token file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs-token.dat] successfully loaded.
+2020-11-13:19:56:05,441  DEBUG    [iPECsAPI.logout:994] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout].
+2020-11-13:19:56:05,442  DEBUG    [iPECsAPI.logout:998] <class 'ipecsAPI.ipecsAPI'>.logout() -> before post request -> command=[https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout] >>> header=[{'Authorization': 'bearer Aade-LftysSot3GVcTyd6o3fRt6drXVJ5hn1NlORu08'}]
+2020-11-13:19:56:05,553  ERROR    [iPECsAPI.logout:1014] Expecting value: line 1 column 1 (char 0)
+2020-11-13:19:56:05,555  WARNING  [iPECsAPI.login:882] HTTP response [401] [Already Login] ->> login attempt #2 entering 12 second(s) delay.
+2020-11-13:19:56:17,663  INFO     [iPECsAPI._httpCheckResponse:738] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-13:19:56:17,666  INFO     [iPECsAPI.login:896] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-13:19:56:17,668  INFO     [iPECsAPI.login:908] Elapsed time for login operation is 12.3735 seconds.
+2020-11-13:19:56:17,673  INFO     [iPECsAPI.startSocketListener:1135] Server at [129.126.242.41:8743] is reachable.
+2020-11-13:19:56:17,674  DEBUG    [iPECsAPI.startSocketListener:1138] Trying to establish WEB Socket connection...
+2020-11-13:19:56:29,95   INFO     [iPECsAPI.startSocketListener:1143] Web socket to [129.126.242.41] established.
+2020-11-13:19:56:29,97   DEBUG    [iPECsAPI._ipecsSocketListener:1184] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer WGtyN136aAIhvsfHqrByDeDYDcAGvxSxXGEwm4dTM5k', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-13:19:56:58,772  DEBUG    [iPECsAPI.addStation:1571] Station [1809] added to station list.
+2020-11-13:19:56:58,780  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:57:01,993  DEBUG    [iPECsAPI.addEvent:1681] ACD Agent login to station [1809].
+2020-11-13:19:57:01,999  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:19:57:11,641  DEBUG    [iPECsAPI.addStation:1536] Call to queue -> no station object created
+2020-11-13:19:57:11,847  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:57:11,859  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:57:11,881  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:57:11,987  DEBUG    [iPECsAPI.emit_call_notification:932] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:19:57:11,991  DEBUG    [iPECsAPI.emit_call_notification:932] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:19:57:12,16   DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:57:12,17   DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:19:57:22,0    DEBUG    [iPECsAPI.addEvent:1717] Station [1809] wrap-up started
+2020-11-13:19:57:22,105  DEBUG    [iPECsAPI.addEvent:1742] Station [1809] is ringing.
+2020-11-13:19:57:22,212  DEBUG    [iPECsAPI.emit_call_notification:932] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-13:19:58:12,251  DEBUG    [iPECsAPI.update:2739] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:20:14:42,735  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-13:20:14:42,736  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-13:20:14:42,737  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-13:20:14:42,738  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-13:20:14:42,738  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.006052 seconds.
+2020-11-13:20:14:42,739  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:20:14:42,740  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:20:14:42,741  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-13:20:14:42,977  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-13:20:14:42,978  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-13:20:14:43,24   INFO     [iPECsAPI.dbConnect:107] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-13:20:14:43,55   INFO     [iPECsAPI.dbConnect:134] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-13:20:14:43,66   DEBUG    [iPECsAPI.__init__:43] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-13:20:14:43,68   DEBUG    [iPECsAPI.run:346] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-13:20:14:43,88   INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-13] at [22:00:00].
+2020-11-13:20:14:43,95   DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.363197 seconds.
+2020-11-13:20:14:49,360  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-13:20:14:49,375  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-13:20:14:49,377  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-13:20:14:49,732  WARNING  [iPECsAPI.login:863] iPECs API reports user is already logged in. Trying to logout user before continuing.
+2020-11-13:20:14:49,734  INFO     [iPECsAPI._getSessionToken:463] Token file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs-token.dat] successfully loaded.
+2020-11-13:20:14:49,735  DEBUG    [iPECsAPI.logout:985] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout].
+2020-11-13:20:14:49,736  DEBUG    [iPECsAPI.logout:989] <class 'ipecsAPI.ipecsAPI'>.logout() -> before post request -> command=[https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout] >>> header=[{'Authorization': 'bearer WGtyN136aAIhvsfHqrByDeDYDcAGvxSxXGEwm4dTM5k'}]
+2020-11-13:20:14:49,838  ERROR    [iPECsAPI.logout:1005] Expecting value: line 1 column 1 (char 0)
+2020-11-13:20:14:49,839  WARNING  [iPECsAPI.login:873] HTTP response [401] [Already Login] ->> login attempt #2 entering 12 second(s) delay.
+2020-11-13:20:15:01,955  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-13:20:15:01,961  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-13:20:15:01,962  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 12.5864 seconds.
+2020-11-13:20:15:01,968  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-13:20:15:01,968  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-13:20:15:01,971  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-13:20:15:01,974  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer rm3rCW0e7ZDr-uMFoatjMhTovCd8bRgTXQS4iHIG730', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-13:20:15:02,576  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-13:20:15:02,582  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:20:15:05,800  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-13:20:15:05,803  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:20:15:19,853  DEBUG    [iPECsAPI.addStation:1527] Call to queue -> no station object created
+2020-11-13:20:15:20,60   DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:20:15:20,79   DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:20:15:20,119  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:20:15:20,238  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:20:15:20,250  DEBUG    [iPECsAPI.emit_call_notification:923] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:20:15:20,254  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:20:15:20,268  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:20:15:30,258  DEBUG    [iPECsAPI.addEvent:1708] Station [1809] wrap-up started
+2020-11-13:20:15:30,363  DEBUG    [iPECsAPI.addEvent:1733] Station [1809] is ringing.
+2020-11-13:20:15:30,473  DEBUG    [iPECsAPI.emit_call_notification:923] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-13:20:15:44,519  ERROR    [iPECsAPI._onCallClosed:2996] Error in class <class 'ipecsAPI.ipecsAPI.ipecsCalls'> - method _onCallClosed -> name 'threadLogCallHistory' is not defined.
+2020-11-13:20:16:24,432  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:20:22:45,524  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-13:20:22:45,525  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-13:20:22:45,526  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-13:20:22:45,527  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-13:20:22:45,528  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.005682 seconds.
+2020-11-13:20:22:45,528  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:20:22:45,529  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-13:20:22:45,530  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-13:20:22:45,715  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-13:20:22:45,716  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-13:20:22:45,736  INFO     [iPECsAPI.dbConnect:107] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-13:20:22:45,748  INFO     [iPECsAPI.dbConnect:134] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-13:20:22:45,749  DEBUG    [iPECsAPI.__init__:43] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-13:20:22:45,756  DEBUG    [iPECsAPI.run:346] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-13:20:22:45,764  INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-13] at [22:00:00].
+2020-11-13:20:22:45,766  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.244585 seconds.
+2020-11-13:20:23:01,955  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-13:20:23:01,957  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-13:20:23:01,958  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-13:20:23:02,60   WARNING  [iPECsAPI.login:863] iPECs API reports user is already logged in. Trying to logout user before continuing.
+2020-11-13:20:23:02,67   INFO     [iPECsAPI._getSessionToken:463] Token file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs-token.dat] successfully loaded.
+2020-11-13:20:23:02,68   DEBUG    [iPECsAPI.logout:985] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout].
+2020-11-13:20:23:02,69   DEBUG    [iPECsAPI.logout:989] <class 'ipecsAPI.ipecsAPI'>.logout() -> before post request -> command=[https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout] >>> header=[{'Authorization': 'bearer rm3rCW0e7ZDr-uMFoatjMhTovCd8bRgTXQS4iHIG730'}]
+2020-11-13:20:23:02,227  ERROR    [iPECsAPI.logout:1005] Expecting value: line 1 column 1 (char 0)
+2020-11-13:20:23:02,228  WARNING  [iPECsAPI.login:873] HTTP response [401] [Already Login] ->> login attempt #2 entering 12 second(s) delay.
+2020-11-13:20:23:14,340  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-13:20:23:14,346  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-13:20:23:14,347  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 12.3905 seconds.
+2020-11-13:20:23:14,351  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-13:20:23:14,352  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-13:20:23:14,355  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-13:20:23:14,357  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer lflZltdkBxzpNmm4dzrynbxc474u3jYBrWYdCh16s1k', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-13:20:23:31,509  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-13:20:23:31,515  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:20:23:34,736  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-13:20:23:34,745  DEBUG    [iPECsAPI.logAgentEvent:208] Agent login/logout event successfully submitted to database.
+2020-11-13:20:23:40,781  DEBUG    [iPECsAPI.addStation:1527] Call to queue -> no station object created
+2020-11-13:20:23:40,987  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:20:23:41,2    DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:20:23:41,29   DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:20:23:41,132  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-13:20:23:41,145  DEBUG    [iPECsAPI.emit_call_notification:923] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-13:20:23:41,158  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:20:23:41,159  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-13:20:23:51,158  DEBUG    [iPECsAPI.addEvent:1708] Station [1809] wrap-up started
+2020-11-13:20:23:51,265  DEBUG    [iPECsAPI.addEvent:1733] Station [1809] is ringing.
+2020-11-13:20:23:51,369  DEBUG    [iPECsAPI.emit_call_notification:923] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-13:20:24:16,380  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-14:13:23:53,549  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-14:13:23:53,550  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-14:13:23:53,551  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-14:13:23:53,552  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-14:13:23:53,553  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.007147 seconds.
+2020-11-14:13:23:53,554  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-14:13:23:53,555  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-14:13:23:53,556  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-14:13:23:53,789  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-14:13:23:53,791  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-14:13:23:53,808  INFO     [iPECsAPI.dbConnect:112] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-14:13:23:53,822  INFO     [iPECsAPI.dbConnect:139] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-14:13:23:53,824  DEBUG    [iPECsAPI.__init__:45] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-14:13:23:53,836  INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-14] at [22:00:00].
+2020-11-14:13:23:53,842  DEBUG    [iPECsAPI.run:360] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-14:13:23:53,845  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.299232 seconds.
+2020-11-14:13:23:53,848  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-14:13:23:53,849  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-14:13:23:53,850  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-14:13:23:54,175  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-14:13:23:54,180  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-14:13:23:54,181  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 0.3320 seconds.
+2020-11-14:13:23:54,186  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-14:13:23:54,187  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-14:13:23:54,189  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-14:13:23:54,193  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer 8gtivrIXxqn5CkYwqq_AgToK1abWn9bMpbueA37PGIA', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-14:13:24:19,264  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-14:13:24:19,270  DEBUG    [iPECsAPI.logAgentEvent:216] Agent login/logout event successfully submitted to database.
+2020-11-14:13:24:22,486  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-14:13:24:22,493  DEBUG    [iPECsAPI.logAgentEvent:216] Agent login/logout event successfully submitted to database.
+2020-11-14:13:24:52,670  DEBUG    [iPECsAPI.addStation:1527] Call to queue -> no station object created
+2020-11-14:13:24:52,875  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-14:13:24:52,889  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-14:13:24:52,906  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-14:13:24:53,18   DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-14:13:24:53,30   DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-14:13:24:53,38   DEBUG    [iPECsAPI.emit_call_notification:923] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-14:13:24:53,53   DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-14:13:25:03,53   DEBUG    [iPECsAPI.addEvent:1708] Station [1809] wrap-up started
+2020-11-14:13:25:03,160  DEBUG    [iPECsAPI.addEvent:1733] Station [1809] is ringing.
+2020-11-14:13:25:03,272  DEBUG    [iPECsAPI.emit_call_notification:923] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-14:13:25:14,426  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:15:42:07,356  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-17:15:42:07,357  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-17:15:42:07,358  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-17:15:42:07,359  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-17:15:42:07,360  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.005579 seconds.
+2020-11-17:15:42:07,361  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:15:42:07,361  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:15:42:07,362  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-17:15:42:07,596  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-17:15:42:07,597  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-17:15:42:07,599  INFO     [iPECsAPI.dbConnect:129] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-17:15:42:07,611  INFO     [iPECsAPI.dbConnect:152] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-17:15:42:07,612  DEBUG    [iPECsAPI.__init__:50] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-17:15:42:07,621  INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-17] at [22:00:00].
+2020-11-17:15:42:07,627  DEBUG    [iPECsAPI.run:411] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:15:42:07,627  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.273106 seconds.
+2020-11-17:15:42:07,631  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-17:15:42:07,632  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-17:15:42:07,633  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-17:15:42:07,922  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-17:15:42:07,927  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-17:15:42:07,927  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 0.2950 seconds.
+2020-11-17:15:42:07,932  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-17:15:42:07,933  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-17:15:42:07,934  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-17:15:42:07,937  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer gblGx1M5NpOpB4gB9_zwCM7xcfb7PDCkOuo4mr5oHY0', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-17:15:42:39,843  DEBUG    [iPECsAPI.addStation:1562] Station [1806] added to station list.
+2020-11-17:15:42:43,857  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:42:50,530  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1806].
+2020-11-17:15:42:50,532  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:42:50,639  DEBUG    [iPECsAPI.addStation:1562] Station [1807] added to station list.
+2020-11-17:15:42:50,641  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:42:53,856  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1807].
+2020-11-17:15:42:53,860  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:42:53,965  DEBUG    [iPECsAPI.addStation:1562] Station [1808] added to station list.
+2020-11-17:15:42:53,975  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:42:57,189  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1808].
+2020-11-17:15:42:57,192  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:42:57,298  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-17:15:42:57,300  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:00,519  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-17:15:43:00,525  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:00,638  DEBUG    [iPECsAPI.addStation:1562] Station [1810] added to station list.
+2020-11-17:15:43:00,641  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:03,856  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1810].
+2020-11-17:15:43:03,858  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:03,976  DEBUG    [iPECsAPI.addStation:1562] Station [1811] added to station list.
+2020-11-17:15:43:03,980  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:07,200  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1811].
+2020-11-17:15:43:07,203  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:07,310  DEBUG    [iPECsAPI.addStation:1562] Station [1812] added to station list.
+2020-11-17:15:43:07,314  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:10,529  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1812].
+2020-11-17:15:43:10,532  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:10,649  DEBUG    [iPECsAPI.addStation:1562] Station [1813] added to station list.
+2020-11-17:15:43:10,650  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:13,864  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1813].
+2020-11-17:15:43:13,867  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:13,979  DEBUG    [iPECsAPI.addStation:1562] Station [1814] added to station list.
+2020-11-17:15:43:13,984  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:17,203  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1814].
+2020-11-17:15:43:17,204  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:17,327  DEBUG    [iPECsAPI.addStation:1562] Station [1815] added to station list.
+2020-11-17:15:43:17,332  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:43:20,545  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1815].
+2020-11-17:15:43:20,552  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:14,809  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-17:15:47:14,811  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-17:15:47:14,813  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-17:15:47:14,815  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-17:15:47:14,816  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.009280 seconds.
+2020-11-17:15:47:14,818  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:15:47:14,819  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:15:47:14,828  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-17:15:47:15,22   INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-17:15:47:15,24   INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-17:15:47:15,27   INFO     [iPECsAPI.dbConnect:129] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-17:15:47:15,48   INFO     [iPECsAPI.dbConnect:152] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-17:15:47:15,51   DEBUG    [iPECsAPI.__init__:50] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-17:15:47:15,63   INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-17] at [22:00:00].
+2020-11-17:15:47:15,69   DEBUG    [iPECsAPI.run:411] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:15:47:15,75   DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.268422 seconds.
+2020-11-17:15:47:15,79   DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-17:15:47:15,82   DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-17:15:47:15,84   INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-17:15:47:15,194  WARNING  [iPECsAPI.login:863] iPECs API reports user is already logged in. Trying to logout user before continuing.
+2020-11-17:15:47:15,196  INFO     [iPECsAPI._getSessionToken:463] Token file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs-token.dat] successfully loaded.
+2020-11-17:15:47:15,198  DEBUG    [iPECsAPI.logout:985] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout].
+2020-11-17:15:47:15,200  DEBUG    [iPECsAPI.logout:989] <class 'ipecsAPI.ipecsAPI'>.logout() -> before post request -> command=[https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout] >>> header=[{'Authorization': 'bearer gblGx1M5NpOpB4gB9_zwCM7xcfb7PDCkOuo4mr5oHY0'}]
+2020-11-17:15:47:15,299  ERROR    [iPECsAPI.logout:1005] Expecting value: line 1 column 1 (char 0)
+2020-11-17:15:47:15,301  WARNING  [iPECsAPI.login:873] HTTP response [401] [Already Login] ->> login attempt #2 entering 12 second(s) delay.
+2020-11-17:15:47:26,843  DEBUG    [iPECsAPI.addStation:1562] Station [1806] added to station list.
+2020-11-17:15:47:26,853  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:27,415  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-17:15:47:27,417  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-17:15:47:27,418  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 12.3357 seconds.
+2020-11-17:15:47:27,423  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-17:15:47:27,423  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-17:15:47:27,426  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer wNe5QOIWXQUBCoqpLMOjmXJzdCoyXCfPixbzFjyUPX4', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-17:15:47:27,426  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-17:15:47:30,50   DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1806].
+2020-11-17:15:47:30,59   DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:30,170  DEBUG    [iPECsAPI.addStation:1562] Station [1807] added to station list.
+2020-11-17:15:47:30,173  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:33,388  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1807].
+2020-11-17:15:47:33,392  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:33,499  DEBUG    [iPECsAPI.addStation:1562] Station [1808] added to station list.
+2020-11-17:15:47:33,511  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:36,724  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1808].
+2020-11-17:15:47:36,728  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:36,847  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-17:15:47:36,850  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:40,60   DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-17:15:47:40,64   DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:40,186  DEBUG    [iPECsAPI.addStation:1562] Station [1810] added to station list.
+2020-11-17:15:47:40,190  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:43,416  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:43,418  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1810].
+2020-11-17:15:47:43,531  DEBUG    [iPECsAPI.addStation:1562] Station [1811] added to station list.
+2020-11-17:15:47:43,536  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:46,748  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1811].
+2020-11-17:15:47:46,752  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:46,865  DEBUG    [iPECsAPI.addStation:1562] Station [1812] added to station list.
+2020-11-17:15:47:46,867  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:50,93   DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1812].
+2020-11-17:15:47:50,95   DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:50,205  DEBUG    [iPECsAPI.addStation:1562] Station [1813] added to station list.
+2020-11-17:15:47:50,209  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:53,448  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1813].
+2020-11-17:15:47:53,453  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:53,563  DEBUG    [iPECsAPI.addStation:1562] Station [1814] added to station list.
+2020-11-17:15:47:53,569  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:56,781  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1814].
+2020-11-17:15:47:56,794  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:47:56,905  DEBUG    [iPECsAPI.addStation:1562] Station [1815] added to station list.
+2020-11-17:15:47:56,907  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:48:00,128  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1815].
+2020-11-17:15:48:00,133  DEBUG    [iPECsAPI.logAgentEvent:241] Agent login/logout event successfully submitted to database.
+2020-11-17:15:49:02,227  DEBUG    [iPECsAPI.addStation:1527] Call to queue -> no station object created
+2020-11-17:15:49:02,433  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:15:49:02,445  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:15:49:02,467  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:15:49:02,580  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:15:49:02,593  DEBUG    [iPECsAPI.emit_call_notification:923] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-17:15:49:02,603  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:15:49:02,608  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:15:49:32,611  DEBUG    [iPECsAPI.addEvent:1708] Station [1809] wrap-up started
+2020-11-17:15:49:32,718  DEBUG    [iPECsAPI.addEvent:1733] Station [1809] is ringing.
+2020-11-17:15:49:32,825  DEBUG    [iPECsAPI.emit_call_notification:923] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-17:15:49:42,485  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:15:49:46,711  ERROR    [iPECsAPI.logCallHistory:285] Mongo DB - [ipecs_mongo] ['threadLogCallHistory' object has no attribute '_verbose'].
+2020-11-17:16:00:41,503  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-17:16:00:41,504  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-17:16:00:41,506  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-17:16:00:41,507  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-17:16:00:41,507  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.006716 seconds.
+2020-11-17:16:00:41,508  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:16:00:41,509  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:16:00:41,509  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-17:16:00:41,751  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-17:16:00:41,752  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-17:16:00:41,753  INFO     [iPECsAPI.dbConnect:131] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-17:16:00:41,788  INFO     [iPECsAPI.dbConnect:154] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-17:16:00:41,790  DEBUG    [iPECsAPI.__init__:52] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-17:16:00:41,805  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:16:00:41,825  INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-17] at [22:00:00].
+2020-11-17:16:00:41,829  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.328578 seconds.
+2020-11-17:16:00:41,831  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-17:16:00:41,833  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-17:16:00:41,834  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-17:16:00:41,972  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-17:16:00:41,974  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-17:16:00:41,974  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 0.1414 seconds.
+2020-11-17:16:00:41,979  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-17:16:00:41,980  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-17:16:00:41,999  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer Xp9EmgqVGmgCoNGUwSneTEDx3EBx52b1e1N0ETirp7Y', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-17:16:00:42,2    INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-17:16:02:40,876  DEBUG    [iPECsAPI.addStation:1562] Station [1806] added to station list.
+2020-11-17:16:02:40,877  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:44,91   DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1806].
+2020-11-17:16:02:44,93   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:44,203  DEBUG    [iPECsAPI.addStation:1562] Station [1807] added to station list.
+2020-11-17:16:02:44,206  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:47,420  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1807].
+2020-11-17:16:02:47,427  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:47,539  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:47,540  DEBUG    [iPECsAPI.addStation:1562] Station [1808] added to station list.
+2020-11-17:16:02:50,756  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1808].
+2020-11-17:16:02:50,761  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:50,865  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-17:16:02:50,866  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:54,83   DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-17:16:02:54,87   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:54,200  DEBUG    [iPECsAPI.addStation:1562] Station [1810] added to station list.
+2020-11-17:16:02:54,203  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:57,427  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1810].
+2020-11-17:16:02:57,430  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:02:57,546  DEBUG    [iPECsAPI.addStation:1562] Station [1811] added to station list.
+2020-11-17:16:02:57,550  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:00,754  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1811].
+2020-11-17:16:03:00,761  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:00,869  DEBUG    [iPECsAPI.addStation:1562] Station [1812] added to station list.
+2020-11-17:16:03:00,877  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:04,100  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1812].
+2020-11-17:16:03:04,105  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:04,214  DEBUG    [iPECsAPI.addStation:1562] Station [1813] added to station list.
+2020-11-17:16:03:04,215  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:07,433  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1813].
+2020-11-17:16:03:07,440  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:07,549  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:07,550  DEBUG    [iPECsAPI.addStation:1562] Station [1814] added to station list.
+2020-11-17:16:03:10,770  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1814].
+2020-11-17:16:03:10,773  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:10,894  DEBUG    [iPECsAPI.addStation:1562] Station [1815] added to station list.
+2020-11-17:16:03:10,895  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:03:14,125  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1815].
+2020-11-17:16:03:14,128  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:04:39,419  DEBUG    [iPECsAPI.addStation:1527] Call to queue -> no station object created
+2020-11-17:16:04:39,626  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:16:04:39,633  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:16:04:39,658  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:16:04:39,759  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:16:04:39,786  DEBUG    [iPECsAPI.emit_call_notification:923] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-17:16:04:39,797  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:16:04:39,826  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:16:05:09,800  DEBUG    [iPECsAPI.addEvent:1708] Station [1809] wrap-up started
+2020-11-17:16:05:09,913  DEBUG    [iPECsAPI.addEvent:1733] Station [1809] is ringing.
+2020-11-17:16:05:10,18   DEBUG    [iPECsAPI.emit_call_notification:923] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-17:16:06:24,312  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:16:06:30,501  ERROR    [iPECsAPI.logCallHistory:292] Mongo DB - [ipecs_mongo] ['threadLogCallHistory' object has no attribute '_make_id'].
+2020-11-17:16:11:56,580  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-17:16:11:56,584  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-17:16:11:56,598  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-17:16:11:56,614  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-17:16:11:56,626  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.049394 seconds.
+2020-11-17:16:11:56,660  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:16:11:56,672  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:16:11:56,674  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-17:16:11:56,858  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-17:16:11:56,861  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-17:16:11:56,864  INFO     [iPECsAPI.dbConnect:131] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-17:16:11:56,888  INFO     [iPECsAPI.dbConnect:154] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-17:16:11:56,892  DEBUG    [iPECsAPI.__init__:52] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-17:16:11:56,907  INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-17] at [22:00:00].
+2020-11-17:16:11:56,911  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:16:11:56,918  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.343343 seconds.
+2020-11-17:16:11:56,923  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-17:16:11:56,926  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-17:16:11:56,929  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-17:16:11:57,53   WARNING  [iPECsAPI.login:863] iPECs API reports user is already logged in. Trying to logout user before continuing.
+2020-11-17:16:11:57,55   INFO     [iPECsAPI._getSessionToken:463] Token file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs-token.dat] successfully loaded.
+2020-11-17:16:11:57,56   DEBUG    [iPECsAPI.logout:985] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout].
+2020-11-17:16:11:57,56   DEBUG    [iPECsAPI.logout:989] <class 'ipecsAPI.ipecsAPI'>.logout() -> before post request -> command=[https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout] >>> header=[{'Authorization': 'bearer Xp9EmgqVGmgCoNGUwSneTEDx3EBx52b1e1N0ETirp7Y'}]
+2020-11-17:16:11:57,162  ERROR    [iPECsAPI.logout:1005] Expecting value: line 1 column 1 (char 0)
+2020-11-17:16:11:57,163  WARNING  [iPECsAPI.login:873] HTTP response [401] [Already Login] ->> login attempt #2 entering 12 second(s) delay.
+2020-11-17:16:12:09,276  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-17:16:12:09,279  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-17:16:12:09,279  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 12.3533 seconds.
+2020-11-17:16:12:09,284  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-17:16:12:09,284  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-17:16:12:09,286  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer VdCOTjJ747MhooqkeXmm3cgs0v3vED-2dkP408kT2pQ', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-17:16:12:09,289  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-17:16:13:23,631  DEBUG    [iPECsAPI.addStation:1562] Station [1806] added to station list.
+2020-11-17:16:13:23,637  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:26,856  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1806].
+2020-11-17:16:13:26,872  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:26,982  DEBUG    [iPECsAPI.addStation:1562] Station [1807] added to station list.
+2020-11-17:16:13:26,988  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:30,204  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1807].
+2020-11-17:16:13:30,207  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:30,321  DEBUG    [iPECsAPI.addStation:1562] Station [1808] added to station list.
+2020-11-17:16:13:30,326  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:33,539  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1808].
+2020-11-17:16:13:33,541  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:33,647  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:33,648  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-17:16:13:36,863  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-17:16:13:36,865  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:36,984  DEBUG    [iPECsAPI.addStation:1562] Station [1810] added to station list.
+2020-11-17:16:13:36,985  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:40,205  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1810].
+2020-11-17:16:13:40,214  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:40,324  DEBUG    [iPECsAPI.addStation:1562] Station [1811] added to station list.
+2020-11-17:16:13:40,328  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:43,545  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1811].
+2020-11-17:16:13:43,554  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:43,664  DEBUG    [iPECsAPI.addStation:1562] Station [1812] added to station list.
+2020-11-17:16:13:43,669  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:46,886  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1812].
+2020-11-17:16:13:46,897  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:47,16   DEBUG    [iPECsAPI.addStation:1562] Station [1813] added to station list.
+2020-11-17:16:13:47,20   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:50,243  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1813].
+2020-11-17:16:13:50,245  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:50,348  DEBUG    [iPECsAPI.addStation:1562] Station [1814] added to station list.
+2020-11-17:16:13:50,352  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:53,573  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1814].
+2020-11-17:16:13:53,577  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:53,691  DEBUG    [iPECsAPI.addStation:1562] Station [1815] added to station list.
+2020-11-17:16:13:53,692  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:13:56,910  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1815].
+2020-11-17:16:13:56,913  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:14:18,267  DEBUG    [iPECsAPI.addStation:1527] Call to queue -> no station object created
+2020-11-17:16:14:18,475  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:16:14:18,485  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:16:14:18,516  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:16:14:18,620  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567]
+2020-11-17:16:14:18,629  DEBUG    [iPECsAPI.emit_call_notification:923] Call       is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=     ]
+2020-11-17:16:14:18,630  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:16:14:18,641  DEBUG    [iPECsAPI.update:2730] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:16:14:48,669  DEBUG    [iPECsAPI.addEvent:1708] Station [1809] wrap-up started
+2020-11-17:16:14:48,775  DEBUG    [iPECsAPI.addEvent:1733] Station [1809] is ringing.
+2020-11-17:16:14:48,880  DEBUG    [iPECsAPI.emit_call_notification:923] Call 0000 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=0000]
+2020-11-17:16:58:31,583  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-17:16:58:31,585  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-17:16:58:31,586  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-17:16:58:31,587  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-17:16:58:31,588  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.006300 seconds.
+2020-11-17:16:58:31,589  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:16:58:31,590  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:16:58:31,591  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-17:16:58:31,832  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-17:16:58:31,834  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-17:16:58:31,836  INFO     [iPECsAPI.dbConnect:131] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-17:16:58:31,856  INFO     [iPECsAPI.dbConnect:154] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-17:16:58:31,857  DEBUG    [iPECsAPI.__init__:52] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-17:16:58:31,864  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:16:58:31,872  INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-17] at [22:00:00].
+2020-11-17:16:58:31,882  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.299931 seconds.
+2020-11-17:16:58:31,892  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-17:16:58:31,899  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-17:16:58:31,902  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-17:16:58:32,246  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-17:16:58:32,248  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-17:16:58:32,248  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 0.3494 seconds.
+2020-11-17:16:58:32,253  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-17:16:58:32,253  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-17:16:58:32,255  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-17:16:58:32,256  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer 7s6ZYi9XQCN3XNUMiX1gAoF_92ijcDXKN8kOhzWZIDQ', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-17:16:58:57,105  DEBUG    [iPECsAPI.addStation:1562] Station [1806] added to station list.
+2020-11-17:16:58:57,109  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:00,323  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1806].
+2020-11-17:16:59:00,329  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:00,436  DEBUG    [iPECsAPI.addStation:1562] Station [1807] added to station list.
+2020-11-17:16:59:00,439  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:03,653  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1807].
+2020-11-17:16:59:03,656  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:03,768  DEBUG    [iPECsAPI.addStation:1562] Station [1808] added to station list.
+2020-11-17:16:59:03,776  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:06,987  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1808].
+2020-11-17:16:59:07,5    DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:07,113  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-17:16:59:07,121  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:10,343  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-17:16:59:10,347  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:10,456  DEBUG    [iPECsAPI.addStation:1562] Station [1810] added to station list.
+2020-11-17:16:59:10,459  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:13,673  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1810].
+2020-11-17:16:59:13,678  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:13,792  DEBUG    [iPECsAPI.addStation:1562] Station [1811] added to station list.
+2020-11-17:16:59:13,796  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:17,6    DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1811].
+2020-11-17:16:59:17,8    DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:17,126  DEBUG    [iPECsAPI.addStation:1562] Station [1812] added to station list.
+2020-11-17:16:59:17,127  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:20,347  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1812].
+2020-11-17:16:59:20,354  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:20,466  DEBUG    [iPECsAPI.addStation:1562] Station [1813] added to station list.
+2020-11-17:16:59:20,472  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:23,679  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1813].
+2020-11-17:16:59:23,685  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:23,795  DEBUG    [iPECsAPI.addStation:1562] Station [1814] added to station list.
+2020-11-17:16:59:23,801  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:27,15   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:27,16   DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1814].
+2020-11-17:16:59:27,135  DEBUG    [iPECsAPI.addStation:1562] Station [1815] added to station list.
+2020-11-17:16:59:27,142  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:30,354  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1815].
+2020-11-17:16:59:30,358  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:16:59:51,559  DEBUG    [iPECsAPI.addStation:1527] Call to queue -> no station object created
+2020-11-17:17:00:03,566  ERROR    [iPECsAPI.addEvent:1800] <class 'ipecsAPI.ipecsAPI.ipecsStations'>.addEvent -> 'int' object has no attribute 'isnumeric'
+2020-11-17:17:00:04,927  DEBUG    [iPECsAPI.update:2742] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:17:00:04,933  ERROR    [iPECsAPI.addEvent:1800] <class 'ipecsAPI.ipecsAPI.ipecsStations'>.addEvent -> 'int' object has no attribute 'isnumeric'
+2020-11-17:17:00:05,677  DEBUG    [iPECsAPI.update:2742] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:17:00:15,157  DEBUG    [iPECsAPI.update:2742] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:17:02:24,715  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-17:17:02:24,716  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-17:17:02:24,717  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-17:17:02:24,718  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-17:17:02:24,719  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.006954 seconds.
+2020-11-17:17:02:24,721  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:17:02:24,722  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-17:17:02:24,723  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-17:17:02:24,725  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-17:17:02:24,727  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-17:17:02:24,729  INFO     [iPECsAPI.dbConnect:131] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-17:17:02:24,744  INFO     [iPECsAPI.dbConnect:154] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-17:17:02:24,746  DEBUG    [iPECsAPI.__init__:52] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-17:17:02:24,755  INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-17] at [22:00:00].
+2020-11-17:17:02:24,760  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:17:02:24,764  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.051615 seconds.
+2020-11-17:17:02:24,768  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-17:17:02:24,769  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-17:17:02:24,771  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-17:17:02:24,913  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-17:17:02:24,919  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-17:17:02:24,920  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 0.1511 seconds.
+2020-11-17:17:02:24,925  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-17:17:02:24,927  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-17:17:02:24,929  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-17:17:02:24,931  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer 9HI1vyfhU9x-1Vo61NIVCx4eDMGQ35nBbqnVayQEJac', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-17:17:02:27,352  DEBUG    [iPECsAPI.addStation:1562] Station [1806] added to station list.
+2020-11-17:17:02:27,356  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:30,569  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1806].
+2020-11-17:17:02:30,574  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:30,685  DEBUG    [iPECsAPI.addStation:1562] Station [1807] added to station list.
+2020-11-17:17:02:30,690  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:33,917  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1807].
+2020-11-17:17:02:33,922  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:34,35   DEBUG    [iPECsAPI.addStation:1562] Station [1808] added to station list.
+2020-11-17:17:02:34,43   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:37,261  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1808].
+2020-11-17:17:02:37,264  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:37,382  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-17:17:02:37,384  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:40,599  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1809].
+2020-11-17:17:02:40,607  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:40,714  DEBUG    [iPECsAPI.addStation:1562] Station [1810] added to station list.
+2020-11-17:17:02:40,715  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:43,936  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:43,939  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1810].
+2020-11-17:17:02:44,54   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:44,55   DEBUG    [iPECsAPI.addStation:1562] Station [1811] added to station list.
+2020-11-17:17:02:47,281  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:47,283  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1811].
+2020-11-17:17:02:47,399  DEBUG    [iPECsAPI.addStation:1562] Station [1812] added to station list.
+2020-11-17:17:02:47,404  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:50,619  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1812].
+2020-11-17:17:02:50,620  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:50,734  DEBUG    [iPECsAPI.addStation:1562] Station [1813] added to station list.
+2020-11-17:17:02:50,737  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:53,968  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1813].
+2020-11-17:17:02:53,980  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:54,92   DEBUG    [iPECsAPI.addStation:1562] Station [1814] added to station list.
+2020-11-17:17:02:54,97   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:57,317  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1814].
+2020-11-17:17:02:57,324  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:57,433  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:02:57,434  DEBUG    [iPECsAPI.addStation:1562] Station [1815] added to station list.
+2020-11-17:17:03:00,654  DEBUG    [iPECsAPI.addEvent:1672] ACD Agent login to station [1815].
+2020-11-17:17:03:00,658  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-17:17:03:05,572  DEBUG    [iPECsAPI.addStation:1527] Call to queue -> no station object created
+2020-11-17:17:03:16,408  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567?start_time=2020/11/17 17:03:11]
+2020-11-17:17:03:16,409  DEBUG    [iPECsAPI.emit_call_notification:923] Call 912366567 is ringing at 1809 -> parsing command: [http://10.10.0.33:3000/calls/1809/number=912366567?start_time=2020/11/17 17:03:08]
+2020-11-17:17:03:18,503  DEBUG    [iPECsAPI.update:2742] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:17:03:18,506  DEBUG    [iPECsAPI.update:2742] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:17:03:24,950  DEBUG    [iPECsAPI.update:2742] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:17:03:48,516  DEBUG    [iPECsAPI.addEvent:1708] Station [1809] wrap-up started
+2020-11-17:17:03:48,629  DEBUG    [iPECsAPI.addEvent:1733] Station [1809] is ringing.
+2020-11-17:17:04:27,854  DEBUG    [iPECsAPI.update:2742] Call status updated -> station: [1809], callRefID: [5000].
+2020-11-17:18:42:24,845  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:20:22:24,884  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:22:00:00,8    ERROR    [iPECsAPI._resetCounters:430] <class 'ipecsAPI.ipecsAPI'>._resetCounters -> 'str' object is not callable.
+2020-11-17:22:00:00,9    ERROR    [iPECsAPI._init_Reset_Timer:581] Error in class <class 'ipecsAPI.ipecsAPI'> - method _init_Reset_Timer -> 'str' object is not callable.
+2020-11-17:22:02:24,969  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-17:23:42:25,35   DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:01:22:25,92   DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:03:02:25,181  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:04:42:25,280  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:06:22:25,308  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:08:02:25,409  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:09:42:25,433  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:10:42:04,867  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-18:10:42:04,871  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-18:10:42:04,872  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-18:10:42:04,877  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-18:10:42:04,878  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.012180 seconds.
+2020-11-18:10:42:04,878  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-18:10:42:04,879  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-18:10:42:04,884  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-18:10:42:05,126  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-18:10:42:05,127  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-18:10:42:05,129  INFO     [iPECsAPI.dbConnect:131] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-18:10:42:05,185  INFO     [iPECsAPI.dbConnect:154] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-18:10:42:05,185  DEBUG    [iPECsAPI.__init__:52] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-18:10:42:05,197  INFO     [iPECsAPI._init_Reset_Timer:577] Next call counter reset on [2020-11-18] at [22:00:00].
+2020-11-18:10:42:05,227  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:10:42:05,237  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.371658 seconds.
+2020-11-18:10:42:05,241  DEBUG    [iPECsAPI.sendCommand:768] ->> received request to execute iPECs [login] command.
+2020-11-18:10:42:05,253  DEBUG    [iPECsAPI.login:829] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-18:10:42:05,254  INFO     [iPECsAPI.login:838] Logging into iPECs API ->> attempt #1
+2020-11-18:10:42:05,607  INFO     [iPECsAPI._httpCheckResponse:729] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-18:10:42:05,613  INFO     [iPECsAPI.login:887] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-18:10:42:05,614  INFO     [iPECsAPI.login:899] Elapsed time for login operation is 0.3614 seconds.
+2020-11-18:10:42:05,619  INFO     [iPECsAPI.startSocketListener:1126] Server at [129.126.242.41:8743] is reachable.
+2020-11-18:10:42:05,619  DEBUG    [iPECsAPI.startSocketListener:1129] Trying to establish WEB Socket connection...
+2020-11-18:10:42:05,621  INFO     [iPECsAPI.startSocketListener:1134] Web socket to [129.126.242.41] established.
+2020-11-18:10:42:05,623  DEBUG    [iPECsAPI._ipecsSocketListener:1175] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer X8pyf--RuHmwlSe-Fp2NjLVpGl2c5TPUrpnrsNq3Bp0', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-18:10:42:06,708  DEBUG    [iPECsAPI.addStation:1561] Station [1806] added to station list.
+2020-11-18:10:42:06,712  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:09,931  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1806].
+2020-11-18:10:42:09,935  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:10,56   DEBUG    [iPECsAPI.addStation:1561] Station [1807] added to station list.
+2020-11-18:10:42:10,61   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:13,278  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1807].
+2020-11-18:10:42:13,279  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:13,409  DEBUG    [iPECsAPI.addStation:1561] Station [1808] added to station list.
+2020-11-18:10:42:13,417  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:16,622  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1808].
+2020-11-18:10:42:16,624  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:16,729  DEBUG    [iPECsAPI.addStation:1561] Station [1809] added to station list.
+2020-11-18:10:42:16,733  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:19,946  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1809].
+2020-11-18:10:42:19,948  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:20,61   DEBUG    [iPECsAPI.addStation:1561] Station [1810] added to station list.
+2020-11-18:10:42:20,62   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:23,282  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1810].
+2020-11-18:10:42:23,285  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:23,400  DEBUG    [iPECsAPI.addStation:1561] Station [1811] added to station list.
+2020-11-18:10:42:23,405  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:26,624  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1811].
+2020-11-18:10:42:26,626  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:26,733  DEBUG    [iPECsAPI.addStation:1561] Station [1812] added to station list.
+2020-11-18:10:42:26,736  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:29,951  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1812].
+2020-11-18:10:42:29,956  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:30,71   DEBUG    [iPECsAPI.addStation:1561] Station [1813] added to station list.
+2020-11-18:10:42:30,73   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:33,284  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1813].
+2020-11-18:10:42:33,288  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:33,400  DEBUG    [iPECsAPI.addStation:1561] Station [1814] added to station list.
+2020-11-18:10:42:33,406  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:36,613  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1814].
+2020-11-18:10:42:36,616  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:36,731  DEBUG    [iPECsAPI.addStation:1561] Station [1815] added to station list.
+2020-11-18:10:42:36,732  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:42:39,950  DEBUG    [iPECsAPI.addEvent:1669] ACD Agent login to station [1815].
+2020-11-18:10:42:39,952  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:45:04,116  ERROR    [iPECsAPI._resetCounters:430] <class 'ipecsAPI.ipecsAPI'>_resetCounters -> 'str' object is not callable.
+2020-11-18:10:45:04,118  ERROR    [iPECsAPI._init_Reset_Timer:581] Error in class <class 'ipecsAPI.ipecsAPI'> - method _init_Reset_Timer -> 'str' object is not callable.
+2020-11-18:10:45:59,299  ERROR    [iPECsAPI._resetCounters:430] <class 'ipecsAPI.ipecsAPI'>_resetCounters -> 'str' object is not callable.
+2020-11-18:10:45:59,303  ERROR    [iPECsAPI._init_Reset_Timer:581] Error in class <class 'ipecsAPI.ipecsAPI'> - method _init_Reset_Timer -> 'str' object is not callable.
+2020-11-18:10:47:34,785  ERROR    [iPECsAPI._resetCounters:430] <class 'ipecsAPI.ipecsAPI'>_resetCounters -> 'str' object is not callable.
+2020-11-18:10:47:34,790  ERROR    [iPECsAPI._init_Reset_Timer:581] Error in class <class 'ipecsAPI.ipecsAPI'> - method _init_Reset_Timer -> 'str' object is not callable.
+2020-11-18:10:50:39,137  INFO     [iPECsAPI.config_logger:372] iPECs API Wrapper version 0.8.0 loaded.
+2020-11-18:10:50:39,138  DEBUG    [iPECsAPI.config_logger:373] Log system activated.
+2020-11-18:10:50:39,139  INFO     [iPECsAPI._loadResourceFile:407] Language resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_res_en_GB.json] successfully loaded.
+2020-11-18:10:50:39,140  INFO     [iPECsAPI._loadCommandsFile:516] Commands and Headers resource file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs_commands.json] successfully loaded.
+2020-11-18:10:50:39,140  DEBUG    [iPECsAPI.__init__:90] <class 'ipecs_config.ipecs_config'> initialisation completed in 0.005362 seconds.
+2020-11-18:10:50:39,141  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-18:10:50:39,142  DEBUG    [iPECsAPI.getBaseURIExt:537] Base URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/].
+2020-11-18:10:50:39,142  DEBUG    [iPECsAPI.getFullURI:559] Full URI ->> [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/].
+2020-11-18:10:50:39,395  INFO     [iPECsAPI.getiPECsServerIP:625] Found IP address of [srsupply.fortiddns.com] to be [129.126.242.41].
+2020-11-18:10:50:39,397  INFO     [iPECsAPI.__init__:188] SSL certificate warnings DISABLED.
+2020-11-18:10:50:39,399  INFO     [iPECsAPI.dbConnect:131] Attempting to connect to MongoDB server on [127.0.0.1] at Port [27017], Connection Timeout = 300. Socket Timeout = 500.
+2020-11-18:10:50:39,412  INFO     [iPECsAPI.dbConnect:154] Connection to MongoDB server on [127.0.0.1] at Port [27017] successful.
+2020-11-18:10:50:39,414  DEBUG    [iPECsAPI.__init__:52] <class 'ipecs_mongo.ipecs_db_io'> initialisation complete.
+2020-11-18:10:50:39,424  INFO     [iPECsAPI._init_Reset_Timer:578] Next call counter reset on [2020-11-18] at [22:00:00].
+2020-11-18:10:50:39,428  DEBUG    [iPECsAPI.run:421] Connection to Mongo server 127.0.0.1:27017 is alive.
+2020-11-18:10:50:39,431  DEBUG    [iPECsAPI.__init__:242] <class 'ipecsAPI.ipecsAPI'> initialisation completed in 0.296296 seconds.
+2020-11-18:10:50:39,434  DEBUG    [iPECsAPI.sendCommand:769] ->> received request to execute iPECs [login] command.
+2020-11-18:10:50:39,435  DEBUG    [iPECsAPI.login:830] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login].
+2020-11-18:10:50:39,435  INFO     [iPECsAPI.login:839] Logging into iPECs API ->> attempt #1
+2020-11-18:10:50:39,595  WARNING  [iPECsAPI.login:864] iPECs API reports user is already logged in. Trying to logout user before continuing.
+2020-11-18:10:50:39,597  INFO     [iPECsAPI._getSessionToken:463] Token file [/home/ubuntu/18_08_2020/mysuk/ipecs/src/ipecs-token.dat] successfully loaded.
+2020-11-18:10:50:40,515  DEBUG    [iPECsAPI.addStation:1562] Station [1806] added to station list.
+2020-11-18:10:50:40,523  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:50:43,769  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:50:43,770  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1806].
+2020-11-18:10:50:43,916  DEBUG    [iPECsAPI.addStation:1562] Station [1807] added to station list.
+2020-11-18:10:50:43,918  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:50:47,201  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1807].
+2020-11-18:10:50:47,203  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:50:47,369  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:50:47,369  DEBUG    [iPECsAPI.addStation:1562] Station [1808] added to station list.
+2020-11-18:10:50:50,630  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1808].
+2020-11-18:10:50:50,636  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:50:50,739  DEBUG    [iPECsAPI.addStation:1562] Station [1809] added to station list.
+2020-11-18:10:50:50,741  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:50:55,920  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1809].
+2020-11-18:10:50:57,189  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:51:01,447  DEBUG    [iPECsAPI.addStation:1562] Station [1810] added to station list.
+2020-11-18:10:51:09,915  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:51:17,115  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1810].
+2020-11-18:10:51:19,343  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:51:19,344  DEBUG    [iPECsAPI.logout:986] Attempting to communicate with iPECs API using command: [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout].
+2020-11-18:10:51:25,139  DEBUG    [iPECsAPI.addStation:1562] Station [1811] added to station list.
+2020-11-18:10:51:25,144  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:51:55,11   DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1811].
+2020-11-18:10:51:55,13   DEBUG    [iPECsAPI.logout:990] <class 'ipecsAPI.ipecsAPI'>.logout() -> before post request -> command=[https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/logout] >>> header=[{'Authorization': 'bearer X8pyf--RuHmwlSe-Fp2NjLVpGl2c5TPUrpnrsNq3Bp0'}]
+2020-11-18:10:51:55,19   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:51:59,304  DEBUG    [iPECsAPI.addStation:1562] Station [1812] added to station list.
+2020-11-18:10:51:59,307  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:52:07,946  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1812].
+2020-11-18:10:52:09,631  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:52:10,924  DEBUG    [iPECsAPI.addStation:1562] Station [1813] added to station list.
+2020-11-18:10:52:12,66   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:52:13,638  ERROR    [iPECsAPI._httpCheckResponse:716] [401] HTTP access to [https://srsupply.fortiddns.com:8743/ipxapi/] failed or access not authorised! HTTP Message: [Invalid Token]
+2020-11-18:10:52:32,225  ERROR    [iPECsAPI.logout:1006] [401] HTTP access to [https://srsupply.fortiddns.com:8743/ipxapi/] failed or access not authorised! HTTP Message: [Invalid Token]
+2020-11-18:10:52:33,116  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1813].
+2020-11-18:10:52:34,522  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:52:36,999  DEBUG    [iPECsAPI.addStation:1562] Station [1814] added to station list.
+2020-11-18:10:52:41,97   DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:52:43,949  WARNING  [iPECsAPI.login:874] HTTP response [401] [Already Login] ->> login attempt #2 entering 12 second(s) delay.
+2020-11-18:10:52:47,103  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1814].
+2020-11-18:10:52:47,107  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:52:47,226  DEBUG    [iPECsAPI.addStation:1562] Station [1815] added to station list.
+2020-11-18:10:52:47,233  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:52:50,449  DEBUG    [iPECsAPI.addEvent:1670] ACD Agent login to station [1815].
+2020-11-18:10:52:50,453  DEBUG    [iPECsAPI.logAgentEvent:246] Agent login/logout event successfully submitted to database.
+2020-11-18:10:52:56,84   INFO     [iPECsAPI._httpCheckResponse:730] HTTP request [https://srsupply.fortiddns.com:8743/ipxapi/server/v1/users/acdapi1/login] successful.
+2020-11-18:10:52:56,91   INFO     [iPECsAPI.login:888] Connection established to [https://srsupply.fortiddns.com:8743/ipxapi/] -  Timeout: [120] - System: [iPECS UCP600] - Version: [S-UCP-Rls2008-4.0.33-App] - API: [1.0.0].
+2020-11-18:10:52:56,92   INFO     [iPECsAPI.login:900] Elapsed time for login operation is 136.6578 seconds.
+2020-11-18:10:52:56,97   INFO     [iPECsAPI.startSocketListener:1127] Server at [129.126.242.41:8743] is reachable.
+2020-11-18:10:52:56,99   DEBUG    [iPECsAPI.startSocketListener:1130] Trying to establish WEB Socket connection...
+2020-11-18:10:52:56,101  INFO     [iPECsAPI.startSocketListener:1135] Web socket to [129.126.242.41] established.
+2020-11-18:10:52:56,105  DEBUG    [iPECsAPI._ipecsSocketListener:1176] Socket Connection Parameters are: [wss://129.126.242.41:8743/ipxapi/server/v1/users/acdapi1/login] - [{'Authorization': 'bearer 1SyYszL3QtI6W8ip9J3yGXQyBMS1qudUyre__EoHEdw', 'Upgrade': 'WebSocket', 'Origin': 'https://srsupply.fortiddns.com:8743'}] 
+2020-11-18:11:17:36,45   WARNING  [iPECsAPI._socket_watchdog_check:1071] iPECs server did not send connection 'alive' event within expected time-frame of 60 seconds! Possible connection loss.

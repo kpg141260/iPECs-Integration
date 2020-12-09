@@ -1,0 +1,519 @@
+{
+    "cmd_sequences": {
+        "station_login": {
+            "cmd_1": "cmd_station_login",  "cmd_2": "cmd_station_idle", "cmd_3": "cmd_station_idle",
+            "cmd_4": "cmd_agent_login", "cmd_5": "cmd_station_idle"
+        },
+        "station_logout":   {"cmd_1": "cmd_station_logout", "cmd_2": "cmd_station_idle", "cmd_3": "cmd_station_idle"},
+        "agent_logout":     {"cmd_1": "cmd_agent_logout",   "cmd_2": "cmd_station_idle"},
+        "agent_avail":      {"cmd_1": "cmd_agent_acd_unavail", "cmd_2": "cmd_agent_acd_avail"},
+        "call_inbound":     {
+            "cmd_1":  "cmd_call_in_queue", 
+            "cmd_2":  "cmd_queue_busy", 
+            "cmd_3":  "cmd_caller_info_72", 
+            "cmd_4":  "cmd_caller_info_71", 
+            "cmd_5":  "cmd_call_in_queue_stn", 
+            "cmd_6":  "cmd_station_ringing", 
+            "cmd_7":  "cmd_caller_info_72", 
+            "cmd_8":  "cmd_seize_station", 
+            "cmd_10": "cmd_start_wrap_up", 
+            "cmd_11": "cmd_station_idle", 
+            "cmd_12": "cmd_disconnect", 
+            "cmd_13": "cmd_co_idle", 
+            "cmd_14": "cmd_disconnected", 
+            "cmd_15": "cmd_co_idle", 
+            "cmd_16": "cmd_wrap_up_end"
+        },
+        "call_inbound_hold": {
+            "cmd_1":  "cmd_call_in_queue", 
+            "cmd_2":  "cmd_queue_busy", 
+            "cmd_3":  "cmd_caller_info_72", 
+            "cmd_4":  "caller_info_71", 
+            "cmd_5":  "cmd_call_in_queue_stn", 
+            "cmd_6":  "cmd_station_ringing", 
+            "cmd_7":  "cmd_caller_info_72", 
+            "cmd_8":  "cmd_seize_station",
+            "cmd_9":  "cmd_station_hold", 
+            "cmd_10": "cmd_delay_30",
+            "cmd_11": "cmd_station_hold_recall",
+            "cmd_12": "cmd_delay_20",
+            "cmd_14": "cmd_start_wrap_up", 
+            "cmd_15": "cmd_station_idle", 
+            "cmd_16": "cmd_disconnect", 
+            "cmd_17": "cmd_co_idle", 
+            "cmd_18": "cmd_disconnected", 
+            "cmd_19": "cmd_co_idle", 
+            "cmd_20": "cmd_wrap_up_end"
+        },
+        "agent_dnd": {
+            "cmd_1": "cmd_dnd_active",
+            "cmd_2": "cmd_delay_120",
+            "cmd_3": "cmd_dnd_inactive"
+        }
+    },
+    "cmd_station_login": {
+        "delay": 0.0,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 84, 
+            "eventString": "AGENT IN SERVICE", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"", 
+            "data2":""
+        }
+    },
+    "cmd_station_idle": {
+        "delay": 0.1,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 18, 
+            "eventString": "STATION IDLE", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"", 
+            "data2":""
+        }
+    },
+    "cmd_station_logout": {
+        "delay": 0.0,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 82, 
+            "eventString": "AGENT OUT OF SERVICE", 
+            "sourceType":"", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"", 
+            "data2":""
+        }
+    },
+    "cmd_agent_login": {
+        "delay": 3.0,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 11, 
+            "eventString": "AGENT PRIMARY LOGIN", 
+            "sourceType":"", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":"0000"
+        }
+    },
+    "cmd_agent_logout": {
+        "delay": 0.5,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 12, 
+            "eventString": "AGENT PRIMARY LOGOUT", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":""
+        }
+    },
+    "cmd_agent_acd_unavail": {
+        "delay": 0.0,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 13, 
+            "eventString": "AGENT UCD UNAVAIL", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0005", 
+            "data2":"0008"
+        }
+    },
+    "cmd_agent_acd_avail": {
+        "delay": 120,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 14, 
+            "eventString": "AGENT UCD AVAIL", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0005", 
+            "data2":"0008"
+        }
+    },
+    "cmd_dnd_active": {
+        "delay": 0.0,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 19, 
+            "eventString": "STATION DND ACTIVE", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"", 
+            "data2":""
+        }
+    },
+    "cmd_dnd_inactive": {
+        "delay": 0.0,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 20, 
+            "eventString": "STATION DND INACTIVE", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"", 
+            "data2":""
+        }
+    },
+    "cmd_station_hold": {
+        "delay": 20,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 49, 
+            "eventString": "HOLD", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"", 
+            "data2":""
+        }
+    },
+    "cmd_station_hold_recall": {
+        "delay": 0.1,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 50, 
+            "eventString": "HOLD Recall", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "",
+            "destNumber": "", 
+            "data1":"", 
+            "data2":""
+        }
+    },
+    "cmd_call_in_queue": {
+        "delay": 0.1,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 3,
+            "eventString" : "CO IN RING",
+            "sourceType" : "CO",
+            "sourceNumber" : "0006",
+            "destType" : "",
+            "destNumber" : "     ",
+            "data1" : "    ",
+            "data2" : "0002"
+        }
+    },
+    "cmd_call_in_queue_stn": {
+        "delay": 0.1,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 3,
+            "eventString" : "CO IN RING",
+            "sourceType" : "CO",
+            "sourceNumber" : "0006",
+            "destType" : "",
+            "destNumber" : "",
+            "data1" : "0008",
+            "data2" : "0005"
+        }
+    },
+    "cmd_queue_busy": {
+        "delay": 0.1,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 1,
+            "eventString" : "CO BUSY",
+            "sourceType" : "CO",
+            "sourceNumber" : "0006",
+            "destType" : "Station",
+            "destNumber" : "",
+            "data1" : "    ",
+            "data2" : "    "
+        }
+    },
+    "cmd_caller_info_72": {
+        "delay": 0,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 72,
+            "eventString" : "INCOMMING CALLER INFO",
+            "sourceType" : "CO",
+            "sourceNumber" : "0006",
+            "destType" : "Station",
+            "destNumber" : "",
+            "data1" : "",
+            "data2" : ""
+        }
+    },
+    "cmd_caller_info_71": {
+        "delay": 0,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 71,
+            "eventString" : "INCOMMING DID INFO",
+            "sourceType" : "CO",
+            "sourceNumber" : "0006",
+            "destType" : "Station",
+            "destNumber" : "",
+            "data1" : "",
+            "data2" : ""
+        }
+    },
+    "cmd_station_ringing": {
+        "delay": 0,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 66,
+            "eventString" : "STATION RING",
+            "sourceType" : "Station",
+            "sourceNumber" : "",
+            "destType" : "CO",
+            "destNumber" : "0006",
+            "data1" : "0008",
+            "data2" : "0008"
+        }
+    },
+    "cmd_seize_station": {
+        "delay": 20,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 42,
+            "eventString" : "SEIZE ACK/CONNECT/ANSWER",
+            "sourceType" : "CO",
+            "sourceNumber" : "0006",
+            "destType" : "Station",
+            "destNumber" : "",
+            "data1" : "     ",
+            "data2" : "     "
+        }
+    },
+    "cmd_disconnect": {
+        "delay": 0,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 44,
+            "eventString" : "DISCONNECT",
+            "sourceType" : "Station",
+            "sourceNumber" : "",
+            "destType" : "",
+            "destNumber" : "     ",
+            "data1" : "0000",
+            "data2" : "    "
+        }
+    },
+    "cmd_co_idle": {
+        "delay": 0,
+        "data": {
+            "time" : "",
+            "callRefID" : 0,
+            "eventCode" : 2,
+            "eventString" : "CO IDLE",
+            "sourceType" : "CO",
+            "sourceNumber" : "0006",
+            "destType" : "Station",
+            "destNumber" : "",
+            "data1" : "    ",
+            "data2" : "    "
+        }
+    },
+    "cmd_start_wrap_up": {
+        "delay": 0.1,
+        "data": {
+            "time" : "",
+            "callRefID": "",
+            "eventCode" : 15,
+            "eventString" : "AGENT UCD WRAP UP START",
+            "sourceType" : "Station",
+            "sourceNumber" : "",
+            "destType" : "",
+            "destNumber" : "     ",
+            "data1" : "0008",
+            "data2" : "    "
+        }
+    },
+    "cmd_wrap_up_end": {
+        "delay": 10,
+        "data": {
+            "time" : "",
+            "callRefID": "",
+            "eventCode" : 16,
+            "eventString" : "AGENT UCD WRAP UP END",
+            "sourceType" : "Station",
+            "sourceNumber" : "",
+            "destType" : "",
+            "destNumber" : "     ",
+            "data1" : "0008",
+            "data2" : "    "
+        }
+    },
+    "cmd_outbound_call": {
+        "delay": 0.5,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 12, 
+            "eventString": "AGENT PRIMARY LOGOUT", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":""
+        }
+    },
+    "cmd_inbound_call": {
+        "delay": 40,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 12, 
+            "eventString": "AGENT PRIMARY LOGOUT", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":""
+        }
+    },
+    "cmd_call_to_queue_abn": {
+        "delay": 0.5,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 12, 
+            "eventString": "AGENT PRIMARY LOGOUT", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":""
+        }
+    },
+    "cmd_call_to_queue_ans": {
+        "delay": 0.5,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 12, 
+            "eventString": "AGENT PRIMARY LOGOUT", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":""
+        }
+    },
+    "cmd_call_to_phone_abn": {
+        "delay": 0.5,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 12, 
+            "eventString": "AGENT PRIMARY LOGOUT", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":""
+        }
+    },   
+    "cmd_call_to_phone_ans": {
+        "delay": 0.5,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 12, 
+            "eventString": "AGENT PRIMARY LOGOUT", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":""
+        }
+    },
+    "cmd_delay_10": {
+        "delay": 10,
+        "data": {
+            "eventCode": 999
+        }
+    },
+    "cmd_delay_20": {
+        "delay": 20,
+        "data": {
+            "eventCode": 999
+        }
+    },
+    "cmd_delay_30": {
+        "delay": 30,
+        "data": {
+            "eventCode": 999
+        }
+    },
+    "cmd_delay_60": {
+        "delay": 60,
+        "data": {
+            "eventCode": 999
+        }
+    },
+    "cmd_delay_120": {
+        "delay": 120,
+        "data": {
+            "eventCode": 999
+        }
+    },
+    "event-data": {
+        "delay": 0,
+        "data": {
+            "time":"", 
+            "callRefID": "", 
+            "eventCode": 12, 
+            "eventString": "AGENT PRIMARY LOGOUT", 
+            "sourceType":"Station", 
+            "sourceNumber": "", 
+            "destType": "", 
+            "destNumber": "", 
+            "data1":"0008", 
+            "data2":""
+        }
+    }
+}
